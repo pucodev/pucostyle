@@ -2,6 +2,13 @@
   "name": "pucostyle",
   "version": "1.0.0",
   "description": "Guia de estilos",
+  "license": "ISC",
   "author": "Jorge Estrada <jor1550g@gmail.com> (https://github.com/pucodev)",
-  "license": "ISC"
+  "scripts": {
+    "dev": "sass -w style/index.scss dist/pucostyle.css",
+    "build": "sass --no-source-map style/index.scss dist/pucostyle.css && sass --style=compressed --no-source-map style/index.scss dist/pucostyle.min.css"
+  },
+  "devDependencies": {
+    "sass": "1.69.5"
+  }
 }

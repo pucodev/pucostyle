@@ -21,3 +21,11 @@ yarn-debug.log*
 yarn-error.log*
 
 dist
+
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.example.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
