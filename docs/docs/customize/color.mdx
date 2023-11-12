@@ -1,0 +1,49 @@
+import PreviewCode from '../../src/components/PreviewCode.mdx'
+import ColorSwatch from '../../src/components/ColorSwatch.mdx'
+
+# Colores
+
+Se maneja un conjunto de colores en variables css usando el patron `--ps-color-{color-name}`
+
+## Tabla de colores
+
+export const colors = [
+  'primary',
+  'accent',
+  'green',
+  'blue',
+  'yellow',
+  'red',
+  'gray-100',
+  'gray-200',
+  'gray-300',
+  'white',
+  'black ',
+]
+
+export const ColorRow = ({ color }) => (
+  <tr>
+    <td>{color}</td>
+    <td>
+      <ColorSwatch color={color}></ColorSwatch>
+    </td>
+    <td>
+      <code>--ps-color-{color}</code>
+    </td>
+  </tr>
+)
+
+<table>
+  <thead>
+    <tr>
+      <th>Color</th>
+      <th>Preview</th>
+      <th>Variable</th>
+    </tr>
+  </thead>
+  <tbody>
+    {colors.map((color, idx) => (
+      <ColorRow color={color} />
+    ))}
+  </tbody>
+</table>

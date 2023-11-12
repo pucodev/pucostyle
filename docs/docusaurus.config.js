@@ -40,7 +40,11 @@ const config = {
           sidebarPath: './sidebars.js',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: [
+            './src/css/custom.css',
+            './src/css/preview-code.css',
+            './src/css/lib/pucostyle.css',
+          ],
         },
       }),
     ],
