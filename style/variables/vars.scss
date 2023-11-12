@@ -5,6 +5,11 @@
     --ps-color-#{$name}: #{$code};
   }
 
+  // Color UI
+  @each $name, $code in $ui-colors {
+    --ps-ui-color-#{$name}: #{$code};
+  }
+
   // Spaces
   @each $name, $value in $spaces {
     --ps-space-#{$name}: #{$value};
@@ -16,8 +21,8 @@
   }
 
   // FONT WEIGHT
-  --font-weight-light: 300;
-  --font-weight-normal: 400;
-  --font-weight-bold: 700;
-  --font-weight-black: 900;
+  --ps-font-weight-light: 300;
+  --ps-font-weight-normal: 400;
+  --ps-font-weight-bold: 700;
+  --ps-font-weight-black: 900;
 }

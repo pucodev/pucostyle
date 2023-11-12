@@ -1,10 +1,10 @@
 .title {
-  font-weight: var(--font-weight-bold);
+  font-weight: var(--ps-font-weight-bold);
   font-size: 2rem;
 }
 
 .subtitle {
-  font-weight: var(--font-weight-normal);
+  font-weight: var(--ps-font-weight-normal);
   font-size: 1.25rem;
 }
 
@@ -31,7 +31,7 @@
 $font-weights: "light", "normal", "bold", "black";
 @each $weight in $font-weights {
   .font-#{$weight} {
-    font-weight: var(--font-weight-#{$weight}) !important;
+    font-weight: var(--ps-font-weight-#{$weight}) !important;
   }
 }
 

@@ -1,0 +1,40 @@
+.input,
+.textarea,
+.select {
+  display: block;
+  width: 100%;
+  padding: var(--ps-space-2) var(--ps-space-3);
+  appearance: none;
+  background-color: var(--ps-color-white);
+  background-clip: padding-box;
+  border: 1px solid var(--ps-ui-color-border);
+  border-radius: var(--ps-space-1);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none;
+
+  &:active,
+  &:focus {
+    border-color: var(--ps-ui-color-input-active-border);
+    box-shadow: 0 0 0 0.25rem var(--ps-ui-color-input-active-shadow);
+  }
+
+  &[disabled],
+  fieldset[disabled] {
+    background-color: var(--ps-ui-color-input-disabled-bg);
+    box-shadow: none;
+    color: var(--ps-ui-color-input-disabled-color);
+    cursor: not-allowed;
+
+    &::placeholder {
+      color: var(--ps-ui-color-input-disabled-placeholder);
+    }
+  }
+}
+
+.textarea {
+  resize: vertical;
+
+  &:not([rows]) {
+    min-height: 6rem;
+  }
+}
