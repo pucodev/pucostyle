@@ -1,0 +1,7 @@
+:root,
+.is-ps-initial-vars {
+  // Colors
+  @each $name, $code in $colors {
+    --ps-color-#{$name}: #{$code};
+  }
+}
