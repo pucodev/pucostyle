@@ -1,9 +1,11 @@
 .title {
   font-weight: var(--font-weight-bold);
+  font-size: 2rem;
 }
 
 .subtitle {
   font-weight: var(--font-weight-normal);
+  font-size: 1.25rem;
 }
 
 @each $name, $value in $text-size {
@@ -22,5 +24,21 @@
 
   .is-size-#{$name} {
     font-size: var(--ps-text-#{$name}) !important;
+  }
+}
+
+// FONT WEIGHT
+$font-weights: "light", "normal", "bold", "black";
+@each $weight in $font-weights {
+  .font-#{$weight} {
+    font-weight: var(--font-weight-#{$weight}) !important;
+  }
+}
+
+// Text align
+$text-aligns: ("center", "left", "right");
+@each $align in $text-aligns {
+  .text-#{$align} {
+    text-align: #{$align} !important;
   }
 }
