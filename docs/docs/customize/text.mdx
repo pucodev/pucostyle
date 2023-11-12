@@ -1,0 +1,42 @@
+import { textSizes, defaultDimen } from '../../src/js/variables'
+
+# Textos
+
+## Tabla de tamaño de textos
+
+Los calculos de los pixeles están sobre la base de <code>{defaultDimen}px</code>
+
+export const DimenRow = ({ dimen, idx }) => (
+  <tr>
+    <td>{idx + 1}</td>
+    <td>h{idx + 1}</td>
+    <td>{dimen}rem</td>
+    <td>{dimen * defaultDimen}px</td>
+    <td>
+      <code>--ps-text-{idx + 1}</code>
+    </td>
+    <td>
+      <div className="pucostyle">
+        <div className={`is-ps-initial-vars h${idx + 1}`}>Disfruta la vida</div>
+      </div>
+    </td>
+  </tr>
+)
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>h tag</th>
+      <th>Tamaño</th>
+      <th>Pixels</th>
+      <th>Variable</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {textSizes.map((dimen, idx) => (
+      <DimenRow dimen={dimen} idx={idx} />
+    ))}
+  </tbody>
+</table>
