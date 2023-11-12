@@ -1,0 +1,26 @@
+.title {
+  font-weight: var(--font-weight-bold);
+}
+
+.subtitle {
+  font-weight: var(--font-weight-normal);
+}
+
+@each $name, $value in $text-size {
+  h#{$name},
+  .h#{$name} {
+    font-size: var(--ps-text-#{$name});
+  }
+
+  .title.is-#{$name} {
+    font-size: var(--ps-text-#{$name});
+  }
+
+  .subtitle.is-#{$name} {
+    font-size: var(--ps-text-#{$name});
+  }
+
+  .is-size-#{$name} {
+    font-size: var(--ps-text-#{$name}) !important;
+  }
+}

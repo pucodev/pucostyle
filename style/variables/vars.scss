@@ -9,4 +9,15 @@
   @each $name, $value in $spaces {
     --ps-space-#{$name}: #{$value};
   }
+
+  // Text
+  @each $name, $value in $text-size {
+    --ps-text-#{$name}: #{$value};
+  }
+
+  // FONT WEIGHT
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
 }
