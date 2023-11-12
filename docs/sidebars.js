@@ -13,6 +13,11 @@ const sidebars = {
       label: 'Personalización',
       items: ['customize/color', 'customize/spacing', 'customize/text'],
     },
+    {
+      type: 'category',
+      label: 'Helpers',
+      items: ['helper/text'],
+    },
   ],
 }
 

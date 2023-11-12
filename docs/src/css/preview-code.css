@@ -1,0 +1,19 @@
+.docu-preview {
+  background-color: rgb(248, 250, 252);
+  border-radius: 12px;
+  position: relative;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+
+.docu-preview__bg {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='%23f1f5f9'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
+  position: absolute;
+  inset: 0;
+}
+
+.docu-preview__content {
+  padding: 32px !important;
+  border-radius: 12px;
+  position: relative;
+}

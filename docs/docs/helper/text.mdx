@@ -1,0 +1,103 @@
+import PreviewCode from '../../src/components/PreviewCode.mdx'
+
+# Opciones de texto
+
+## Headings
+
+Se tienen disponible
+
+- `<h1>` al `<h6>`
+- Clase de `.h1` al `.h6`
+- Clase de `is-size-1` al `is-size-6`
+
+:::info
+
+Para ver los tamaños disponibles visitar la [documentacion de personalizar textos](../customize/text)
+
+:::
+
+### Ejemplos
+
+<PreviewCode>
+  <h1>Título 1</h1>
+  <h2>Título 2</h2>
+  <div className="h3">Título 3</div>
+  <div className="is-size-4">Título 4</div>
+</PreviewCode>
+```html
+<h1>Título 1</h1>
+<h2>Título 2</h2>
+<div class="h3">Título 3</div>
+<div class="is-size-4">Título 4</div>
+```
+
+## Títulos y subtítulos
+
+Tenemos dos opciones `.title` y `.subtitle`
+
+| Nombre    | Clase       | weight | size    | Preview                                                             |
+| --------- | ----------- | ------ | ------- | ------------------------------------------------------------------- |
+| Título    | `.title`    | bold   | 2rem    | <PreviewCode><div className="title">Title</div></PreviewCode>       |
+| Subtítulo | `.subtitle` | normal | 1.25rem | <PreviewCode><div className="subtitle">Subtitle</div></PreviewCode> |
+
+Estas se pueden combinar con tamaños
+
+### Ejemplo
+
+<PreviewCode>
+  <div className="title is-1">Title 1</div>
+  <div className="title is-3">Title 3</div>
+
+  <div className="subtitle is-2">Subtitle 2</div>
+  <div className="subtitle is-4">Subtitle 4</div>
+</PreviewCode>
+```html
+<div class="title is-1">Title 1</div>
+<div class="title is-3">Title 3</div>
+
+<div class="subtitle is-2">Subtitle 2</div>
+<div class="subtitle is-4">Subtitle 4</div>
+```
+
+## Font weight
+
+| Nombre | Clase          | variable               | valor | Preview                                                             |
+| ------ | -------------- | ---------------------- | ----- | ------------------------------------------------------------------- |
+| light  | `.font-light`  | `--font-weight-light`  | 300   | <PreviewCode><div className='font-light'>Texto</div></PreviewCode>  |
+| normal | `.font-normal` | `--font-weight-normal` | 400   | <PreviewCode><div className='font-normal'>Texto</div></PreviewCode> |
+| bold   | `.font-bold`   | `--font-weight-bold`   | 700   | <PreviewCode><div className='font-bold'>Texto</div></PreviewCode>   |
+| black  | `.font-black`  | `--font-weight-black`  | 900   | <PreviewCode><div className='font-black'>Texto</div></PreviewCode>  |
+
+### Ejemplo
+
+<PreviewCode>
+  <div className="font-ligth">Light Text</div>
+  <div className="font-bold">Bold Text</div>
+</PreviewCode>
+
+```html
+<div class="font-ligth">Light Text</div>
+<div class="font-bold">Bold Text</div>
+```
+
+## Text align
+
+| Nombre | Clase          |
+| ------ | -------------- |
+| center | `.text-center` |
+| left   | `.text-left`   |
+| right  | `.text-right`  |
+
+### Ejemplo
+
+<PreviewCode>
+  <div className="text-center">Centered text</div>
+  <div className="text-right">Right text</div>
+  <div className="text-left">Left text</div>
+</PreviewCode>
+
+```html
+<div class="text-center">Centered text</div>
+<div class="text-right">Right text</div>
+<div class="text-left">Left text</div>
+```
