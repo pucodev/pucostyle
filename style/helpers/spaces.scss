@@ -1,0 +1,67 @@
+@each $name, $value in $spaces {
+  // WIDTHS
+  .w-#{$name} {
+    width: var(--ps-space-#{$name}) !important;
+  }
+
+  // MARGINS
+  .m-#{$name} {
+    margin: var(--ps-space-#{$name}) !important;
+  }
+  .mt-#{$name} {
+    margin-top: var(--ps-space-#{$name}) !important;
+  }
+  .mr-#{$name} {
+    margin-right: var(--ps-space-#{$name}) !important;
+  }
+  .mb-#{$name} {
+    margin-bottom: var(--ps-space-#{$name}) !important;
+  }
+  .ml-#{$name} {
+    margin-left: var(--ps-space-#{$name}) !important;
+  }
+  .mx-#{$name} {
+    margin-left: var(--ps-space-#{$name}) !important;
+    margin-right: var(--ps-space-#{$name}) !important;
+  }
+  .my-#{$name} {
+    margin-top: var(--ps-space-#{$name}) !important;
+    margin-bottom: var(--ps-space-#{$name}) !important;
+  }
+
+  // PADDINGS
+  .p-#{$name} {
+    padding: var(--ps-space-#{$name}) !important;
+  }
+  .pt-#{$name} {
+    padding-top: var(--ps-space-#{$name}) !important;
+  }
+  .pr-#{$name} {
+    padding-right: var(--ps-space-#{$name}) !important;
+  }
+  .pb-#{$name} {
+    padding-bottom: var(--ps-space-#{$name}) !important;
+  }
+  .pl-#{$name} {
+    padding-left: var(--ps-space-#{$name}) !important;
+  }
+  .px-#{$name} {
+    padding-left: var(--ps-space-#{$name}) !important;
+    padding-right: var(--ps-space-#{$name}) !important;
+  }
+  .py-#{$name} {
+    padding-top: var(--ps-space-#{$name}) !important;
+    padding-bottom: var(--ps-space-#{$name}) !important;
+  }
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+.mr-auto {
+  margin-right: auto !important;
+}
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}

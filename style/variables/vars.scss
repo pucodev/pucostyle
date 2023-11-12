@@ -4,4 +4,9 @@
   @each $name, $code in $colors {
     --ps-color-#{$name}: #{$code};
   }
+
+  // Spaces
+  @each $name, $value in $spaces {
+    --ps-space-#{$name}: #{$value};
+  }
 }
