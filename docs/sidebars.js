@@ -23,6 +23,11 @@ const sidebars = {
       label: 'Elements',
       items: ['element/button'],
     },
+    {
+      type: 'category',
+      label: 'Form',
+      items: ['form/input', 'form/select', 'form/textarea'],
+    },
   ],
 }
 

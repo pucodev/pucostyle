@@ -1,0 +1,132 @@
+import PreviewCode from '../../src/components/PreviewCode.mdx'
+
+# Select
+
+## Uso básico
+
+Para implementar selects usar la clase `select` y utilizar `field` como clase contenedora.
+
+<PreviewCode>
+  <div className="field">
+    <label className="label">Label</label>
+    <select className="select">
+      <option>Select value</option>
+      <option value="1">option 1</option>
+      <option value="2">option 2</option>
+    </select>
+  </div>
+</PreviewCode>
+
+```html
+<div class="field">
+  <label class="label">Label</label>
+  <select class="select">
+    <option>Select value</option>
+    <option value="1">option 1</option>
+    <option value="2">option 2</option>
+  </select>
+</div>
+```
+
+## Multiple
+
+<PreviewCode>
+  <select className="select" multiple>
+    <option selected>Select value</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</PreviewCode>
+
+```html
+<select class="select" multiple>
+  <option selected>Select value</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+```
+
+## Disabled
+
+<PreviewCode>
+  <div className="is-flex is-flex-column gap-3">
+    <select className="select" disabled>
+      <option>Select value</option>
+      <option value="1">Option 1</option>
+    </select>
+    <select className="select" multiple disabled>
+      <option selected>Select value</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+  </div>
+</PreviewCode>
+
+```html
+<div class="is-flex is-flex-column gap-3">
+  <!-- Disabled -->
+  <select class="select" disabled>
+    <option>Select value</option>
+    <option value="1">Option 1</option>
+  </select>
+
+  <!-- Multiple disabled -->
+  <select class="select" multiple disabled>
+    <option selected>Select value</option>
+    <option value="1">One</option>
+    <option value="2">Two</option>
+    <option value="3">Three</option>
+  </select>
+</div>
+```
+
+## Validation
+
+<PreviewCode>
+  <div className="is-flex is-flex-column gap-3">
+    <div className="field is-valid">
+      <label className="label">Name</label>
+      <select className="select">
+        <option>Select value</option>
+        <option value="1">option 1</option>
+        <option value="2">option 2</option>
+      </select>
+      <p className="help">Valid name</p>
+    </div>
+    <div className="field is-invalid">
+      <label className="label">Email</label>
+      <select className="select">
+        <option>Select value</option>
+        <option value="1">option 1</option>
+        <option value="2">option 2</option>
+      </select>
+      <p className="help">Invalid email</p>
+    </div>
+  </div>
+</PreviewCode>
+
+```html
+<div class="is-flex is-flex-column gap-3">
+  <div class="field is-valid">
+    <label class="label">Name</label>
+    <select class="select">
+      <option>Select value</option>
+      <option value="1">option 1</option>
+      <option value="2">option 2</option>
+    </select>
+    <p class="help">Valid name</p>
+  </div>
+  <div class="field is-invalid">
+    <label class="label">Email</label>
+    <select class="select">
+      <option>Select value</option>
+      <option value="1">option 1</option>
+      <option value="2">option 2</option>
+    </select>
+    <p class="help">Invalid email</p>
+  </div>
+</div>
+```

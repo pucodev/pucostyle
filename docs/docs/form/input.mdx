@@ -1,0 +1,86 @@
+import PreviewCode from '../../src/components/PreviewCode.mdx'
+
+# Input
+
+## Uso básico
+
+Para implementar inputs usar la clase `input` y utilizar `field` como clase contenedora.
+
+<PreviewCode>
+  <div className="is-flex is-flex-column gap-3">
+    <div className="field">
+      <label className="label">Name</label>
+      <input className="input" type="text" placeholder="Text input" />
+    </div>
+    <div className="field">
+      <label className="label">Name</label>
+      <input className="input" type="text" placeholder="Text input" />
+      <p className="help">Help message</p>
+    </div>
+  </div>
+</PreviewCode>
+
+```html
+<div class="is-flex is-flex-column gap-3">
+  <!-- Normal input -->
+  <div class="field">
+    <label class="label">Name</label>
+    <input class="input" type="text" placeholder="Text input" />
+  </div>
+
+  <!-- With help message -->
+  <div class="field">
+    <label class="label">Name</label>
+    <input class="input" type="text" placeholder="Text input" />
+    <p class="help">Help message</p>
+  </div>
+</div>
+```
+
+## Disabled
+
+<PreviewCode>
+  <div className="field">
+    <label className="label">Name</label>
+    <input className="input" type="text" placeholder="Text input" disabled />
+  </div>
+</PreviewCode>
+
+```html
+<div class="field">
+  <label class="label">Name</label>
+  <input class="input" type="text" placeholder="Text input" disabled />
+</div>
+```
+
+## Validation
+
+<PreviewCode>
+  <div className="is-flex is-flex-column gap-3">
+    <div className="field is-valid">
+      <label className="label">Name</label>
+      <input className="input" type="text" placeholder="Text input" />
+      <p className="help">Valid name</p>
+    </div>
+    <div className="field is-invalid">
+      <label className="label">Email</label>
+      <input className="input" type="text" placeholder="Text input" />
+      <p className="help">Invalid email</p>
+    </div>
+  </div>
+</PreviewCode>
+
+```html
+<div class="is-flex is-flex-column gap-3">
+  <div class="field is-valid">
+    <label class="label">Name</label>
+    <input class="input" type="text" placeholder="Text input" />
+    <p class="help">Valid name</p>
+  </div>
+  <div class="field is-invalid">
+    <label class="label">Email</label>
+    <input class="input" type="text" placeholder="Text input" />
+    <p class="help">Invalid email</p>
+  </div>
+</div>
+```

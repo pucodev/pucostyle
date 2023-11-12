@@ -1,0 +1,135 @@
+import PreviewCode from '../../src/components/PreviewCode.mdx'
+
+# Textarea
+
+## Uso básico
+
+Para implementar texareas usar la clase `text` y utilizar `field` como clase contenedora.
+
+<PreviewCode>
+  <div className="is-flex is-flex-column gap-3">
+    <div className="field">
+      <label className="label">Name</label>
+      <textarea
+        className="textarea"
+        type="text"
+        placeholder="Text input"
+      ></textarea>
+    </div>
+    <div className="field">
+      <label className="label">Name with help</label>
+      <textarea
+        className="textarea"
+        type="text"
+        placeholder="Text input"
+      ></textarea>
+      <p className="help">Help message</p>
+    </div>
+    <div className="field">
+      <label className="label">Name with rows</label>
+      <textarea
+        className="textarea"
+        type="text"
+        placeholder="Text input"
+        rows="3"
+      ></textarea>
+    </div>
+  </div>
+</PreviewCode>
+
+```html
+<div class="is-flex is-flex-column gap-3">
+  <!-- Normal textarea -->
+  <div class="field">
+    <label class="label">Name</label>
+    <textarea class="textarea" type="text" placeholder="Text input"></textarea>
+  </div>
+
+  <!-- With help message -->
+  <div class="field">
+    <label class="label">Name</label>
+    <textarea class="textarea" type="text" placeholder="Text input"></textarea>
+    <p class="help">Help message</p>
+  </div>
+
+  <!-- With rows -->
+  <div class="field">
+    <label class="label">Name with rows</label>
+    <textarea
+      class="textarea"
+      type="text"
+      placeholder="Text input"
+      rows="3"
+    ></textarea>
+  </div>
+</div>
+```
+
+## Disabled
+
+<PreviewCode>
+  <div className="field">
+    <label className="label">Name</label>
+    <textarea
+      className="textarea"
+      type="text"
+      placeholder="Text input"
+      disabled
+    ></textarea>
+  </div>
+</PreviewCode>
+
+```html
+<div class="field">
+  <label class="label">Name</label>
+  <textarea
+    class="textarea"
+    type="text"
+    placeholder="Text input"
+    disabled
+  ></textarea>
+</div>
+```
+
+## Validation
+
+<PreviewCode>
+  <div className="is-flex is-flex-column gap-3">
+    <div className="field is-valid">
+      <label className="label">Name</label>
+      <textarea
+        className="textarea"
+        type="text"
+        placeholder="Text input"
+      ></textarea>
+      <p className="help">Valid name</p>
+    </div>
+    <div className="field is-invalid">
+      <label className="label">Email</label>
+      <textarea
+        className="textarea"
+        type="text"
+        placeholder="Text input"
+      ></textarea>
+      <p className="help">Invalid email</p>
+    </div>
+  </div>
+</PreviewCode>
+
+```html
+<div class="is-flex is-flex-column gap-3">
+  <!-- Valid -->
+  <div class="field is-valid">
+    <label class="label">Name</label>
+    <textarea class="textarea" type="text" placeholder="Text input"></textarea>
+    <p class="help">Valid name</p>
+  </div>
+
+  <!-- Invalid -->
+  <div class="field is-invalid">
+    <label class="label">Email</label>
+    <textarea class="textarea" type="text" placeholder="Text input"></textarea>
+    <p class="help">Invalid email</p>
+  </div>
+</div>
+```
