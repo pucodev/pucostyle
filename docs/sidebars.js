@@ -16,7 +16,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Helpers',
-      items: ['helper/text'],
+      items: ['helper/text', 'helper/color'],
     },
   ],
 }

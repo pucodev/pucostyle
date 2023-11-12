@@ -1,0 +1,70 @@
+import { colors } from '../../src/js/variables'
+import PreviewCode from '../../src/components/PreviewCode.mdx'
+
+# Colores
+
+Cambia el color de texto o fondo
+
+import CodeBlock from '@theme/CodeBlock'
+
+## Color texto
+
+export const ColorRow = ({ color }) => (
+  <tr>
+    <td>{color}</td>
+    <td>
+      <CodeBlock>text-{color}</CodeBlock>
+    </td>
+    <td>
+      <PreviewCode>
+        <div className={`text-${color}`}>Texto</div>
+      </PreviewCode>
+    </td>
+  </tr>
+)
+
+<table>
+  <thead>
+    <tr>
+      <th>Color</th>
+      <th>Class</th>
+      <th>Preview</th>
+    </tr>
+  </thead>
+  <tbody>
+    {colors.map((color, idx) => (
+      <ColorRow color={color} />
+    ))}
+  </tbody>
+</table>
+
+## Color background
+
+export const ColorBgRow = ({ color }) => (
+  <tr>
+    <td>{color}</td>
+    <td>
+      <CodeBlock>bg-{color}</CodeBlock>
+    </td>
+    <td>
+      <PreviewCode>
+        <div className={`bg-${color} px-3 py-2`}>Texto</div>
+      </PreviewCode>
+    </td>
+  </tr>
+)
+
+<table>
+  <thead>
+    <tr>
+      <th>Color</th>
+      <th>Class</th>
+      <th>Preview</th>
+    </tr>
+  </thead>
+  <tbody>
+    {colors.map((color, idx) => (
+      <ColorBgRow color={color} />
+    ))}
+  </tbody>
+</table>
