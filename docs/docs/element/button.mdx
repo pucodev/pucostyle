@@ -1,0 +1,188 @@
+import { colors } from '../../src/js/variables'
+import PreviewCode from '../../src/components/PreviewCode.mdx'
+import CodeBlock from '@theme/CodeBlock'
+
+# Button
+
+## Uso básico
+
+Para usar botones usar la clase `btn`
+
+<PreviewCode>
+  <div className="is-flex gap-3">
+    <button className="btn">Button 1</button>
+    <a className="btn" href="#">
+      Button 2
+    </a>
+  </div>
+</PreviewCode>
+
+```html
+<div class="is-flex gap-3">
+  <button class="btn">Button 1</button>
+  <a class="btn" href="#">Button 2</a>
+</div>
+```
+
+## Colores
+
+Un botón está disponible para varios botones para ello se debe usar la clase `is-{color}` junto con `btn`
+
+export const ColorRow = ({ color }) => (
+  <tr>
+    <td>
+      <CodeBlock>is-{color}</CodeBlock>
+    </td>
+    <td>
+      <PreviewCode>
+        <button className={`btn is-${color}`}>Button</button>
+      </PreviewCode>
+    </td>
+  </tr>
+)
+
+<table>
+  <thead>
+    <tr>
+      <th>Clase</th>
+      <th>Preview</th>
+    </tr>
+  </thead>
+  <tbody>
+    {colors.map((color, idx) => (
+      <ColorRow color={color} />
+    ))}
+  </tbody>
+</table>
+
+### Ejemplos
+
+<PreviewCode>
+  <div className="is-flex gap-3">
+    <button className="btn">Button 1</button>
+    <button className="btn is-red">Button red</button>
+    <button className="btn is-green">Button green</button>
+    <button className="btn is-yellow text-black">Button yellow</button>
+  </div>
+</PreviewCode>
+
+```html
+<div class="is-flex gap-3">
+  <button class="btn">Button 1</button>
+  <button class="btn is-red">Button red</button>
+  <button class="btn is-green">Button green</button>
+  <button class="btn is-yellow text-black">Button yellow</button>
+</div>
+```
+
+## Outlined
+
+Un botón puede ser del tipo **outlined** usando la clase `is-outlined` además se puede seleccionar el color usando la clase `is-{color}`
+
+<PreviewCode>
+  <div className="is-flex gap-3 is-flex-wrap-wrap">
+    <button className="btn is-outlined">Outlined</button>
+    <button className="btn is-outlined is-accent">Outlined accent</button>
+    <button className="btn is-outlined is-green">Outlined green</button>
+    <button className="btn is-outlined is-yellow">Outlined yellow</button>
+    <button className="btn is-outlined is-red">Outlined red</button>
+  </div>
+</PreviewCode>
+
+```html
+<div class="is-flex gap-3 is-flex-wrap-wrap">
+  <button class="btn is-outlined">Outlined</button>
+  <button class="btn is-outlined is-accent">Outlined accent</button>
+  <button class="btn is-outlined is-green">Outlined green</button>
+  <button class="btn is-outlined is-yellow">Outlined yellow</button>
+  <button class="btn is-outlined is-red">Outlined red</button>
+</div>
+```
+
+## Invertidos
+
+Un botón puede ser del tipo **inverted** usando la clase `is-inverted` además se puede seleccionar el color usando la clase `is-{color}`
+
+<PreviewCode>
+  <div className="is-flex gap-3 is-flex-wrap-wrap">
+    <button className="btn is-inverted">Inverted</button>
+    <button className="btn is-inverted is-accent">Inverted accent</button>
+    <button className="btn is-inverted is-green">Inverted green</button>
+    <button className="btn is-inverted is-yellow">Inverted yellow</button>
+    <button className="btn is-inverted is-red">Inverted red</button>
+  </div>
+</PreviewCode>
+
+```html
+<div class="is-flex gap-3 is-flex-wrap-wrap">
+  <button class="btn is-inverted">Inverted</button>
+  <button class="btn is-inverted is-accent">Inverted accent</button>
+  <button class="btn is-inverted is-green">Inverted green</button>
+  <button class="btn is-inverted is-yellow">Inverted yellow</button>
+  <button class="btn is-inverted is-red">Inverted red</button>
+</div>
+```
+
+## Rounded
+
+Un botón puede ser del tipo **rounded** usando la clase `is-rounded` además se puede seleccionar el color usando la clase `is-{color}`
+
+<PreviewCode>
+  <div className="is-flex gap-3 is-flex-wrap-wrap">
+    <button className="btn is-rounded">Rounded</button>
+    <button className="btn is-rounded is-accent">Rounded accent</button>
+    <button className="btn is-rounded is-green">Rounded green</button>
+    <button className="btn is-rounded is-outlined is-yellow">
+      Rounded yellow
+    </button>
+    <button className="btn is-rounded is-inverted is-red">Rounded red</button>
+  </div>
+</PreviewCode>
+
+```html
+<div class="is-flex gap-3 is-flex-wrap-wrap">
+  <button class="btn is-rounded">Rounded</button>
+  <button class="btn is-rounded is-accent">Rounded accent</button>
+  <button class="btn is-rounded is-green">Rounded green</button>
+  <button class="btn is-rounded is-outlined is-yellow">Rounded yellow</button>
+  <button class="btn is-rounded is-inverted is-red">Rounded red</button>
+</div>
+```
+
+## Light
+
+Un botón puede ser del tipo **light** usando la clase `is-light` además se puede seleccionar el color usando la clase `is-{color}`.
+
+:::info
+
+Para dar el efecto de `light` lo que se hace es poner la **opacidad a 0.2** del color seleccionado
+
+:::
+
+<PreviewCode>
+  <div className="is-flex gap-3 is-flex-wrap-wrap">
+    <button className="btn is-light">Light</button>
+    <button className="btn is-light is-accent">Light accent</button>
+    <button className="btn is-light is-green">Light green</button>
+    <button className="btn is-light is-yellow">Light yellow</button>
+    <button className="btn is-light is-red">Light red</button>
+  </div>
+</PreviewCode>
+
+```html
+<div class="is-flex gap-3 is-flex-wrap-wrap">
+  <button class="btn is-light">Light</button>
+  <button class="btn is-light is-accent">Light accent</button>
+  <button class="btn is-light is-green">Light green</button>
+  <button class="btn is-light is-yellow">Light yellow</button>
+  <button class="btn is-light is-red">Light red</button>
+</div>
+```
+
+## Tamaños
+
+| Clase       | Preview                                                                  |
+| ----------- | ------------------------------------------------------------------------ |
+| `is-small`  | <PreviewCode><button class="btn is-small">Button</button></PreviewCode>  |
+| `is-medium` | <PreviewCode><button class="btn is-medium">Button</button></PreviewCode> |
+| `is-large`  | <PreviewCode><button class="btn is-large">Button</button></PreviewCode>  |

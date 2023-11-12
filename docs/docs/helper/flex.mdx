@@ -1,0 +1,223 @@
+import PreviewCode from '../../src/components/PreviewCode.mdx'
+
+# Flex
+
+Clases para manejar flex items
+
+## Uso básico
+
+Para poder usar flex items usar la clase `is-flex`
+
+<PreviewCode>
+  <div className="is-flex text-white gap-3">
+    <div className="bg-primary p-3 rounded-md">Flex item 1</div>
+    <div className="bg-accent p-3 rounded-md">Flex item 2</div>
+    <div className="bg-primary p-3 rounded-md">Flex item 3</div>
+    <div className="bg-accent p-3 rounded-md">...</div>
+  </div>
+</PreviewCode>
+
+```html
+<div class="is-flex gap-3">
+  <div>Flex item 1</div>
+  <div>Flex item 2</div>
+  <div>Flex item 3</div>
+  <div>...</div>
+</div>
+```
+
+## Flex direction
+
+### Row
+
+Usa `is-flex-row` para configurar la dirección horizontal
+
+<PreviewCode>
+  <div className="is-flex is-flex-row text-white gap-3">
+    <div className="bg-primary p-3 rounded-md">Flex item 1</div>
+    <div className="bg-accent p-3 rounded-md">Flex item 2</div>
+    <div className="bg-primary p-3 rounded-md">Flex item 3</div>
+    <div className="bg-accent p-3 rounded-md">...</div>
+  </div>
+</PreviewCode>
+
+:::tip
+
+Por defecto usando solo `is-flex` ya está configurado como flex row
+
+:::
+
+### Column
+
+Usa `is-flex-column` para configurar la dirección vertical
+
+<PreviewCode>
+  <div className="is-flex is-flex-column text-white gap-3">
+    <div className="bg-primary p-3 rounded-md">Flex item 1</div>
+    <div className="bg-accent p-3 rounded-md">Flex item 2</div>
+    <div className="bg-primary p-3 rounded-md">Flex item 3</div>
+    <div className="bg-accent p-3 rounded-md">...</div>
+  </div>
+</PreviewCode>
+
+```html
+<div class="is-flex is-flex-column gap-3">
+  <div>Flex item 1</div>
+  <div>Flex item 2</div>
+  <div>Flex item 3</div>
+  <div>...</div>
+</div>
+```
+
+## Justify content
+
+| class                              | property                         |
+| ---------------------------------- | -------------------------------- |
+| `is-justify-content-flex-start`    | `justify-content: flex-start`    |
+| `is-justify-content-flex-end`      | `justify-content: flex-end`      |
+| `is-justify-content-center`        | `justify-content: center`        |
+| `is-justify-content-space-between` | `justify-content: space-between` |
+| `is-justify-content-space-around`  | `justify-content: space-around`  |
+| `is-justify-content-space-evenly`  | `justify-content: space-evenly`  |
+
+### Gráfica
+
+<figure>
+  <img
+    src="https://css-tricks.com/wp-content/uploads/2018/10/justify-content.svg"
+    width="100%"
+    style={{ maxWidth: '320px' }}
+  />
+  {/* prettier-ignore */}
+  <figcaption>
+    Imágen de <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="blank">css-tricks</a>.
+  </figcaption>
+</figure>
+
+### Ejemplos
+
+**.is-justify-content-center**
+
+<PreviewCode>
+  <div className="is-flex p-3 bg-gray-100 is-justify-content-center text-white gap-3">
+    <div className="bg-primary p-3 rounded-md">Flex item 1</div>
+    <div className="bg-accent p-3 rounded-md">Flex item 2</div>
+    <div className="bg-accent p-3 rounded-md">...</div>
+  </div>
+</PreviewCode>
+
+```html
+<div class="is-flex is-justify-content-center gap-3">
+  <div>Flex item 1</div>
+  <div>Flex item 2</div>
+  <div>...</div>
+</div>
+```
+
+**.is-justify-content-space-between**
+
+<PreviewCode>
+  <div className="is-flex p-3 bg-gray-100 is-justify-content-space-between text-white">
+    <div className="bg-primary p-3 rounded-md">Flex item 1</div>
+    <div className="bg-accent p-3 rounded-md">Flex item 2</div>
+    <div className="bg-primary p-3 rounded-md">Flex item 3</div>
+    <div className="bg-accent p-3 rounded-md">...</div>
+  </div>
+</PreviewCode>
+
+```html
+<div class="is-flex is-justify-content-space-between">
+  <div>Flex item 1</div>
+  <div>Flex item 2</div>
+  <div>Flex item 3</div>
+  <div>...</div>
+</div>
+```
+
+## Align content
+
+| class                            | property                       |
+| -------------------------------- | ------------------------------ |
+| `is-align-content-flex-start`    | `align-content: flex-start`    |
+| `is-align-content-flex-end`      | `align-content: flex-end`      |
+| `is-align-content-center`        | `align-content: center`        |
+| `is-align-content-space-between` | `align-content: space-between` |
+| `is-align-content-space-around`  | `align-content: space-around`  |
+| `is-align-content-space-evenly`  | `align-content: space-evenly`  |
+| `is-align-content-stretch`       | `align-content: stretch`       |
+
+### Gráfica
+
+<figure>
+  <img
+    src="https://css-tricks.com/wp-content/uploads/2018/10/align-content.svg"
+    width="100%"
+    style={{ maxWidth: '320px' }}
+  />
+  {/* prettier-ignore */}
+  <figcaption>
+    Imágen de <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="blank">css-tricks</a>.
+  </figcaption>
+</figure>
+
+## Align items
+
+| class                       | property                  |
+| --------------------------- | ------------------------- |
+| `is-align-items-flex-start` | `align-items: flex-start` |
+| `is-align-items-flex-end`   | `align-items: flex-end`   |
+| `is-align-items-center`     | `align-items: center`     |
+| `is-align-items-stretch`    | `align-items: stretch`    |
+| `is-align-items-baseline`   | `align-items: baseline`   |
+
+### Gráfica
+
+<figure>
+  <img
+    src="https://css-tricks.com/wp-content/uploads/2018/10/align-items.svg"
+    width="100%"
+    style={{ maxWidth: '320px' }}
+  />
+  {/* prettier-ignore */}
+  <figcaption>
+    Imágen de <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="blank">css-tricks</a>.
+  </figcaption>
+</figure>
+
+### Ejemplos
+
+**.is-align-items-center**
+
+<PreviewCode>
+  <div className="is-flex p-3 bg-gray-100 is-align-items-center text-white gap-3">
+    <div className="bg-primary p-3 rounded-md py-2">Flex item 1</div>
+    <div className="bg-accent p-3 rounded-md py-10">Flex item 2</div>
+    <div className="bg-primary p-3 rounded-md py-6">Flex item 3</div>
+  </div>
+</PreviewCode>
+
+```html
+<div class="is-flex is-align-items-center gap-3">
+  <div class="py-2">Flex item 1</div>
+  <div class="py-10">Flex item 2</div>
+  <div class="py-6">Flex item 3</div>
+</div>
+```
+
+**.is-flex-column .is-align-items-center**
+
+<PreviewCode>
+  <div className="is-flex is-flex-column p-3 bg-gray-100 is-align-items-center text-white gap-3">
+    <div className="bg-primary p-3 rounded-md px-2">Flex item 1</div>
+    <div className="bg-accent p-3 rounded-md px-10">Flex item 2</div>
+    <div className="bg-primary p-3 rounded-md px-6">Flex item 3</div>
+  </div>
+</PreviewCode>
+
+```html
+<div class="is-flex is-flex-column is-align-items-center gap-3">
+  <div class="px-2">Flex item 1</div>
+  <div class="px-10">Flex item 2</div>
+  <div class="px-6">Flex item 3</div>
+</div>
+```
