@@ -1,0 +1,125 @@
+.btn {
+  position: relative;
+  background-color: var(--ps-color-primary);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  border: solid 1px transparent;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: calc(0.5em - 1px);
+  text-align: center;
+  white-space: nowrap;
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: middle;
+  z-index: 0;
+  transition-property: color, background-color, border-color, box-shadow;
+  transition-duration: 0.15s;
+  transition-timing-function: ease-in-out;
+  line-height: inherit;
+
+  // Para generar el efecto de hover
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0;
+    z-index: -1;
+    transition-property: opacity;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in-out;
+  }
+
+  &:hover::before {
+    opacity: 0.04;
+  }
+
+  &.is-large {
+    font-size: var(--ps-text-4); // 1.5rem
+  }
+
+  &.is-medium {
+    font-size: var(--ps-text-5); // 1.25rem
+  }
+
+  &.is-small {
+    font-size: var(--ps-text-7); // 0.75rem
+  }
+
+  &.is-outlined {
+    background-color: transparent;
+    border: solid 1px var(--ps-color-primary);
+  }
+
+  &.is-inverted,
+  &.is-outlined {
+    background-color: var(--ps-color-white);
+    color: var(--ps-color-primary);
+
+    &::before {
+      background-color: var(--ps-color-primary);
+    }
+  }
+
+  &.is-light {
+    background-color: var(--ps-color-white);
+    color: var(--ps-color-primary);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      background-color: var(--ps-color-primary);
+      opacity: 0.2;
+      z-index: -2;
+    }
+  }
+
+  @each $name, $code in $colors {
+    &.is-#{$name} {
+      background-color: var(--ps-color-#{$name});
+    }
+
+    &.is-outlined.is-#{$name} {
+      background-color: transparent;
+      border-color: var(--ps-color-#{$name});
+    }
+
+    &.is-inverted.is-#{$name} {
+      background-color: var(--ps-color-white);
+    }
+
+    &.is-outlined.is-#{$name},
+    &.is-inverted.is-#{$name} {
+      color: var(--ps-color-#{$name});
+
+      &::before {
+        background-color: var(--ps-color-#{$name});
+      }
+    }
+
+    &.is-light.is-#{$name} {
+      background-color: var(--ps-color-white);
+      color: var(--ps-color-#{$name});
+
+      &::after {
+        background-color: var(--ps-color-#{$name});
+      }
+    }
+  }
+
+  &.is-rounded {
+    border-radius: 99999px;
+  }
+}
