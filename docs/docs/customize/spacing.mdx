@@ -1,0 +1,43 @@
+import { spaces, defaultDimen } from '../../src/js/variables'
+
+# Spacing
+
+## Tabla de espacios
+
+Los calculos de los pixeles están sobre la base de <code>{defaultDimen}px</code>
+
+export const DimenRow = ({ dimen, idx }) => (
+  <tr>
+    <td>{idx}</td>
+    <td>{dimen}rem</td>
+    <td>{dimen * defaultDimen}px</td>
+    <td>
+      <code>--ps-space-{idx}</code>
+    </td>
+    <td>
+      <div className="pucostyle">
+        <div
+          className={`has-bg-primary is-ps-initial-vars w-${idx}`}
+          style={{ height: '1rem', borderRadius: '2px' }}
+        ></div>
+      </div>
+    </td>
+  </tr>
+)
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Tamaño</th>
+      <th>Pixels</th>
+      <th>Variable</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {spaces.map((dimen, idx) => (
+      <DimenRow dimen={dimen} idx={idx} />
+    ))}
+  </tbody>
+</table>

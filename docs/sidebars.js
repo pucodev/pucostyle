@@ -11,7 +11,7 @@ const sidebars = {
     {
       type: 'category',
       label: 'Personalización',
-      items: ['customize/color'],
+      items: ['customize/color', 'customize/spacing'],
     },
   ],
 }
