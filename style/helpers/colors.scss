@@ -1,9 +1,9 @@
 @each $name, $code in $colors {
   .has-bg-#{$name} {
-    background-color: #{$code} !important;
+    background-color: var(--ps-color-#{$name}) !important;
   }
 
   .has-text-#{$name} {
-    color: #{$code} !important;
+    color: var(--ps-color-#{$name}) !important;
   }
 }
