@@ -1,30 +1,79 @@
-$colors: (
-  "primary": #0ea5e9,
-  "accent": #f59e0b,
-  "green": #10b981,
-  "blue": #3b82f6,
-  "yellow": #fde047,
-  "red": #ef4444,
-  "gray-100": #f3f4f6,
-  "gray-200": #e5e7eb,
-  "gray-300": #d1d5db,
-  "white": #ffffff,
-  "black": #000,
+$color-primary: (
+  "50": #f8f5fe,
+  "100": #ddd2fd,
+  "200": #c3affc,
+  "300": #a88cfb,
+  "400": #8e69fa,
+  "500": #7447fa,
+  "600": #5c38c8,
+  "700": #452a96,
+  "800": #2e1c64,
+  "900": #170e31,
 );
 
-// ui-colors
-$ui-colors: (
-  "bg": #f0f2f5,
-  "text": #0f172a,
-  "border": map-get($colors, "gray-300"),
-  // INPUT
-  "input-active-border": map-get($colors, "primary"),
-  "input-active-shadow": rgba(map-get($colors, "primary"), 0.25),
-  "input-disabled-bg": #f5f5f5,
-  "input-disabled-color": #7a7a7a,
-  "input-disabled-placeholder": rgba(122, 122, 122, 0.5),
-  "input-valid": map-get($colors, "green"),
-  "input-valid-shadow": rgba(map-get($colors, "green"), 0.25),
-  "input-invalid": map-get($colors, "red"),
-  "input-invalid-shadow": rgba(map-get($colors, "red"), 0.25),
+$color-secondary: (
+  "50": #f5fbfb,
+  "100": #d3eeed,
+  "200": #b0e1e0,
+  "300": #8ed4d2,
+  "400": #6bc7c5,
+  "500": #49bab8,
+  "600": #3a9493,
+  "700": #2b6f6e,
+  "800": #1d4a49,
+  "900": #0e2524,
 );
+
+$color-info: (
+  "50": #f7f9fe,
+  "100": #dce2fe,
+  "200": #c1cbfd,
+  "300": #a5b5fd,
+  "400": #8a9efc,
+  "500": #6f88fc,
+  "600": #586cc9,
+  "700": #425197,
+  "800": #2c3664,
+  "900": #161b32,
+);
+
+$color-success: (
+  "50": #f3fbf8,
+  "100": #c5eee0,
+  "200": #98e0c8,
+  "300": #6ad3b0,
+  "400": #3dc698,
+  "500": #10b981,
+  "600": #0c9467,
+  "700": #096f4d,
+  "800": #064a33,
+  "900": #032419,
+);
+
+$color-warning: (
+  "50": #fffcf6,
+  "100": #fff3d7,
+  "200": #ffeab8,
+  "300": #ffe199,
+  "400": #ffd87a,
+  "500": #ffcf5c,
+  "600": #cca549,
+  "700": #997c37,
+  "800": #665224,
+  "900": #322912,
+);
+
+$color-danger: (
+  "50": #fef5f5,
+  "100": #fbd2d2,
+  "200": #f8aeae,
+  "300": #f58b8b,
+  "400": #f26767,
+  "500": #ef4444,
+  "600": #bf3636,
+  "700": #8f2828,
+  "800": #5f1b1b,
+  "900": #2f0d0d,
+);
+
+$color-labels: "primary", "secondary", "info", "success", "warning", "danger";

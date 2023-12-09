@@ -1,9 +1,9 @@
-@each $name, $code in $colors {
-  .bg-#{$name} {
-    background-color: var(--ps-color-#{$name}) !important;
+@each $label in $color-labels {
+  .bg-#{$label} {
+    background-color: var(--ps-color-#{$label}) !important;
   }
 
-  .text-#{$name} {
-    color: var(--ps-color-#{$name}) !important;
+  .text-#{$label} {
+    color: var(--ps-color-#{$label}) !important;
   }
 }

@@ -1,26 +1,86 @@
 :root,
 .is-ps-initial-vars {
-  // Colors
-  @each $name, $code in $colors {
-    --ps-color-#{$name}: #{$code};
+  // ****************
+  // COLORS
+  // ****************
+  // primary
+  @each $name, $code in $color-primary {
+    --ps-color-primary-#{$name}: #{$code};
   }
 
-  // Color UI
-  @each $name, $code in $ui-colors {
-    --ps-ui-color-#{$name}: #{$code};
+  // secondary
+  @each $name, $code in $color-secondary {
+    --ps-color-secondary-#{$name}: #{$code};
   }
 
+  // info
+  @each $name, $code in $color-info {
+    --ps-color-info-#{$name}: #{$code};
+  }
+
+  // success
+  @each $name, $code in $color-success {
+    --ps-color-success-#{$name}: #{$code};
+  }
+
+  // warning
+  @each $name, $code in $color-warning {
+    --ps-color-warning-#{$name}: #{$code};
+  }
+
+  // danger
+  @each $name, $code in $color-danger {
+    --ps-color-danger-#{$name}: #{$code};
+  }
+
+  // COLOR VARIABLES
+  --ps-color-primary: #{map-get($color-primary, "500")};
+  --ps-color-on-primary: #{map-get($color-primary, "50")};
+  --ps-color-primary-container: #{map-get($color-primary, "200")};
+  --ps-color-on-primary-container: #{map-get($color-primary, "800")};
+
+  --ps-color-secondary: #{map-get($color-secondary, "500")};
+  --ps-color-on-secondary: #{map-get($color-secondary, "50")};
+  --ps-color-secondary-container: #{map-get($color-secondary, "200")};
+  --ps-color-on-secondary-container: #{map-get($color-secondary, "800")};
+
+  --ps-color-info: #{map-get($color-info, "500")};
+  --ps-color-on-info: #{map-get($color-info, "50")};
+  --ps-color-info-container: #{map-get($color-info, "200")};
+  --ps-color-on-info-container: #{map-get($color-info, "800")};
+
+  --ps-color-success: #{map-get($color-success, "500")};
+  --ps-color-on-success: #{map-get($color-success, "50")};
+  --ps-color-success-container: #{map-get($color-success, "200")};
+  --ps-color-on-success-container: #{map-get($color-success, "800")};
+
+  --ps-color-warning: #{map-get($color-warning, "500")};
+  --ps-color-on-warning: #{map-get($color-warning, "800")};
+  --ps-color-warning-container: #{map-get($color-warning, "200")};
+  --ps-color-on-warning-container: #{map-get($color-warning, "800")};
+
+  --ps-color-danger: #{map-get($color-danger, "500")};
+  --ps-color-on-danger: #{map-get($color-danger, "50")};
+  --ps-color-danger-container: #{map-get($color-danger, "200")};
+  --ps-color-on-danger-container: #{map-get($color-danger, "800")};
+
+  // ****************
   // Spaces
+  // ****************
   @each $name, $value in $spaces {
     --ps-space-#{$name}: #{$value};
   }
 
+  // ****************
   // Text
+  // ****************
   @each $name, $value in $text-size {
     --ps-text-#{$name}: #{$value};
   }
 
+  // ****************
   // FONT WEIGHT
+  // ****************
   --ps-font-weight-light: 300;
   --ps-font-weight-normal: 400;
   --ps-font-weight-bold: 700;
