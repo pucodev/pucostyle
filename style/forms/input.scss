@@ -5,28 +5,28 @@
   width: 100%;
   padding: var(--ps-space-2) var(--ps-space-3);
   appearance: none;
-  background-color: var(--ps-color-white);
+  background-color: var(--ps-ui-color-white);
   background-clip: padding-box;
-  border: 1px solid var(--ps-ui-color-border);
+  border: 1px solid var(--ps-color-outline);
   border-radius: var(--ps-space-1);
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  box-shadow: inset 0px 0px var(--ps-color-outline);
+  transition: border-color, box-shadow 0.2s ease;
   outline: none;
 
-  &:active,
-  &:focus {
-    border-color: var(--ps-ui-color-input-active-border);
-    box-shadow: 0 0 0 0.25rem var(--ps-ui-color-input-active-shadow);
+  &:active:not(:disabled),
+  &:focus:not(:disabled) {
+    border-color: var(--ps-color-primary);
+    box-shadow: var(--ps-color-primary) 0px 0px 0px 1px inset;
   }
 
   &[disabled],
   fieldset[disabled] {
-    background-color: var(--ps-ui-color-input-disabled-bg);
-    box-shadow: none;
-    color: var(--ps-ui-color-input-disabled-color);
+    background-color: var(--ps-color-neutral-50);
+    color: var(--ps-color-neutral-700);
     cursor: not-allowed;
 
     &::placeholder {
-      color: var(--ps-ui-color-input-disabled-placeholder);
+      color: var(--ps-color-neutral-500);
     }
   }
 }

@@ -33,36 +33,45 @@
     --ps-color-danger-#{$name}: #{$code};
   }
 
+  // neutral
+  @each $name, $code in $color-neutral {
+    --ps-color-neutral-#{$name}: #{$code};
+  }
+
   // COLOR VARIABLES
-  --ps-color-primary: #{map-get($color-primary, "500")};
-  --ps-color-on-primary: #{map-get($color-primary, "50")};
-  --ps-color-primary-container: #{map-get($color-primary, "200")};
-  --ps-color-on-primary-container: #{map-get($color-primary, "800")};
+  --ps-color-primary: var(--ps-color-primary-500);
+  --ps-color-on-primary: var(--ps-color-primary-50);
+  --ps-color-primary-container: var(--ps-color-primary-200);
+  --ps-color-on-primary-container: var(--ps-color-primary-800);
 
-  --ps-color-secondary: #{map-get($color-secondary, "500")};
-  --ps-color-on-secondary: #{map-get($color-secondary, "50")};
-  --ps-color-secondary-container: #{map-get($color-secondary, "200")};
-  --ps-color-on-secondary-container: #{map-get($color-secondary, "800")};
+  --ps-color-secondary: var(--ps-color-secondary-500);
+  --ps-color-on-secondary: var(--ps-color-secondary-50);
+  --ps-color-secondary-container: var(--ps-color-secondary-200);
+  --ps-color-on-secondary-container: var(--ps-color-secondary-800);
 
-  --ps-color-info: #{map-get($color-info, "500")};
-  --ps-color-on-info: #{map-get($color-info, "50")};
-  --ps-color-info-container: #{map-get($color-info, "200")};
-  --ps-color-on-info-container: #{map-get($color-info, "800")};
+  --ps-color-info: var(--ps-color-info-500);
+  --ps-color-on-info: var(--ps-color-info-50);
+  --ps-color-info-container: var(--ps-color-info-200);
+  --ps-color-on-info-container: var(--ps-color-info-800);
 
-  --ps-color-success: #{map-get($color-success, "500")};
-  --ps-color-on-success: #{map-get($color-success, "50")};
-  --ps-color-success-container: #{map-get($color-success, "200")};
-  --ps-color-on-success-container: #{map-get($color-success, "800")};
+  --ps-color-success: var(--ps-color-success-500);
+  --ps-color-on-success: var(--ps-color-success-50);
+  --ps-color-success-container: var(--ps-color-success-200);
+  --ps-color-on-success-container: var(--ps-color-success-800);
 
-  --ps-color-warning: #{map-get($color-warning, "500")};
-  --ps-color-on-warning: #{map-get($color-warning, "800")};
-  --ps-color-warning-container: #{map-get($color-warning, "200")};
-  --ps-color-on-warning-container: #{map-get($color-warning, "800")};
+  --ps-color-warning: var(--ps-color-warning-500);
+  --ps-color-on-warning: var(--ps-color-warning-800);
+  --ps-color-warning-container: var(--ps-color-warning-200);
+  --ps-color-on-warning-container: var(--ps-color-warning-800);
 
-  --ps-color-danger: #{map-get($color-danger, "500")};
-  --ps-color-on-danger: #{map-get($color-danger, "50")};
-  --ps-color-danger-container: #{map-get($color-danger, "200")};
-  --ps-color-on-danger-container: #{map-get($color-danger, "800")};
+  --ps-color-danger: var(--ps-color-danger-500);
+  --ps-color-on-danger: var(--ps-color-danger-50);
+  --ps-color-danger-container: var(--ps-color-danger-200);
+  --ps-color-on-danger-container: var(--ps-color-danger-800);
+
+  --ps-color-outline: var(--ps-color-neutral-500);
+
+  --ps-color-on-surface: var(--ps-color-neutral-800);
 
   // Other colors
   @each $name, $code in $ui-colors {

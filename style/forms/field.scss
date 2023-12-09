@@ -6,6 +6,8 @@
 
   & .help {
     margin-top: var(--ps-space-1);
+    color: var(--ps-color-outline);
+    font-size: var(--ps-text-7);
   }
 }
 
@@ -13,16 +15,17 @@
   .input,
   .textarea,
   .select {
-    border-color: var(--ps-ui-color-input-valid);
+    border-color: var(--ps-color-success);
 
-    &:active,
-    &:focus {
-      box-shadow: 0 0 0 0.25rem var(--ps-ui-color-input-valid-shadow);
+    &:active:not(:disabled),
+    &:focus:not(:disabled) {
+      border-color: var(--ps-color-success);
+      box-shadow: var(--ps-color-success) 0px 0px 0px 1px inset;
     }
   }
 
   .help {
-    color: var(--ps-ui-color-input-valid);
+    color: var(--ps-color-success);
   }
 }
 
@@ -30,15 +33,16 @@
   .input,
   .textarea,
   .select {
-    border-color: var(--ps-ui-color-input-invalid);
+    border-color: var(--ps-color-danger);
 
-    &:active,
-    &:focus {
-      box-shadow: 0 0 0 0.25rem var(--ps-ui-color-input-invalid-shadow);
+    &:active:not(:disabled),
+    &:focus:not(:disabled) {
+      border-color: var(--ps-color-danger);
+      box-shadow: var(--ps-color-danger) 0px 0px 0px 1px inset;
     }
   }
 
   .help {
-    color: var(--ps-ui-color-input-invalid);
+    color: var(--ps-color-danger);
   }
 }
