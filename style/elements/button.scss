@@ -1,6 +1,6 @@
 .btn {
   position: relative;
-  background-color: var(--ps-color-primary);
+  background-color: var(--ps-ui-color-text);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -30,7 +30,7 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: #000;
+    background-color: #fff;
     opacity: 0;
     z-index: -1;
     transition-property: opacity;
@@ -39,7 +39,7 @@
   }
 
   &:hover::before {
-    opacity: 0.04;
+    opacity: 0.15;
   }
 
   &.is-large {
@@ -56,66 +56,62 @@
 
   &.is-outlined {
     background-color: transparent;
-    border: solid 1px var(--ps-color-primary);
+    border: solid 1px var(--ps-ui-color-text);
   }
 
   &.is-inverted,
   &.is-outlined {
     background-color: var(--ps-color-white);
-    color: var(--ps-color-primary);
+    color: var(--ps-ui-color-text);
 
     &::before {
-      background-color: var(--ps-color-primary);
+      background-color: var(--ps-ui-color-text);
     }
   }
 
-  &.is-light {
-    background-color: var(--ps-color-white);
-    color: var(--ps-color-primary);
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      background-color: var(--ps-color-primary);
-      opacity: 0.2;
-      z-index: -2;
+  &.is-inverted,
+  &.is-outlined,
+  &.is-tonal {
+    &:hover::before {
+      opacity: 0.08;
     }
   }
 
-  @each $name, $code in $colors {
-    &.is-#{$name} {
-      background-color: var(--ps-color-#{$name});
+  &.is-tonal {
+    color: var(--ps-ui-color-text);
+    background-color: #ddd;
+
+    &::before {
+      background-color: #aaa;
+    }
+  }
+
+  @each $label in $color-labels {
+    // Filled
+    &.is-#{$label} {
+      background-color: var(--ps-color-#{$label});
+      color: var(--ps-color-on-#{$label});
     }
 
-    &.is-outlined.is-#{$name} {
+    // Outlined, Inverted
+    &.is-outlined.is-#{$label},
+    &.is-inverted.is-#{$label} {
       background-color: transparent;
-      border-color: var(--ps-color-#{$name});
-    }
-
-    &.is-inverted.is-#{$name} {
-      background-color: var(--ps-color-white);
-    }
-
-    &.is-outlined.is-#{$name},
-    &.is-inverted.is-#{$name} {
-      color: var(--ps-color-#{$name});
+      color: var(--ps-color-#{$label});
 
       &::before {
-        background-color: var(--ps-color-#{$name});
+        background-color: var(--ps-color-#{$label});
       }
     }
 
-    &.is-light.is-#{$name} {
-      background-color: var(--ps-color-white);
-      color: var(--ps-color-#{$name});
+    // Outlined
+    &.is-outlined.is-#{$label} {
+      border-color: var(--ps-color-#{$label});
+    }
 
-      &::after {
-        background-color: var(--ps-color-#{$name});
-      }
+    &.is-tonal.is-#{$label} {
+      background-color: var(--ps-color-#{$label}-container);
+      color: var(--ps-color-on-#{$label}-container);
     }
   }
 

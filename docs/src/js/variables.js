@@ -4,14 +4,9 @@ export const defaultDimen = 16
 
 export const colors = [
   'primary',
-  'accent',
-  'green',
-  'blue',
-  'yellow',
-  'red',
-  'gray-100',
-  'gray-200',
-  'gray-300',
-  'white',
-  'black ',
+  'secondary',
+  'info',
+  'success',
+  'warning',
+  'danger',
 ]
