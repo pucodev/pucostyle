@@ -64,6 +64,11 @@
   --ps-color-danger-container: #{map-get($color-danger, "200")};
   --ps-color-on-danger-container: #{map-get($color-danger, "800")};
 
+  // Other colors
+  @each $name, $code in $ui-colors {
+    --ps-ui-color-#{$name}: #{$code};
+  }
+
   // ****************
   // Spaces
   // ****************

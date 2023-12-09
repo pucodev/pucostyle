@@ -1,9 +1,17 @@
 @each $label in $color-labels {
-  .bg-#{$label} {
+  .is-bg-#{$label} {
     background-color: var(--ps-color-#{$label}) !important;
   }
 
-  .text-#{$label} {
+  .is-text-#{$label} {
     color: var(--ps-color-#{$label}) !important;
+  }
+
+  .is-bg-white {
+    background-color: var(--ps-color-white);
+  }
+
+  .is-text-white {
+    color: var(--ps-ui-color-white);
   }
 }
