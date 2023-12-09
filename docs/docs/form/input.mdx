@@ -40,16 +40,38 @@ Para implementar inputs usar la clase `input` y utilizar `field` como clase cont
 ## Disabled
 
 <PreviewCode>
-  <div className="field">
-    <label className="label">Name</label>
-    <input className="input" type="text" placeholder="Text input" disabled />
+  <div className="is-flex is-flex-column gap-3">
+    <div className="field">
+      <label className="label">Name</label>
+      <input
+        className="input"
+        type="text"
+        placeholder="Text input"
+        disabled
+        value="hola"
+      />
+    </div>
+    <div className="field">
+      <label className="label">Name</label>
+      <input className="input" type="text" placeholder="Text input" disabled />
+    </div>
   </div>
 </PreviewCode>
 
+{/* prettier-ignore */}
 ```html
-<div class="field">
-  <label class="label">Name</label>
-  <input class="input" type="text" placeholder="Text input" disabled />
+<div className="is-flex is-flex-column gap-3">
+  <!-- Disabled con valor -->
+  <div class="field">
+    <label class="label">Name</label>
+    <input class="input" type="text" placeholder="Text input" disabled value="hola" />
+  </div>
+
+  <!-- Disabled con placeholder -->
+  <div class="field">
+    <label class="label">Name</label>
+    <input class="input" type="text" placeholder="Text input" disabled />
+  </div>
 </div>
 ```
 
