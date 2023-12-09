@@ -12,11 +12,11 @@ export const ColorRow = ({ color }) => (
   <tr>
     <td>{color}</td>
     <td>
-      <CodeBlock>text-{color}</CodeBlock>
+      <CodeBlock>is-text-{color}</CodeBlock>
     </td>
     <td>
       <PreviewCode>
-        <div className={`text-${color}`}>Texto</div>
+        <div className={`is-text-${color}`}>Texto</div>
       </PreviewCode>
     </td>
   </tr>
@@ -34,6 +34,7 @@ export const ColorRow = ({ color }) => (
     {colors.map((color, idx) => (
       <ColorRow color={color} />
     ))}
+    <ColorRow color={'white'} />
   </tbody>
 </table>
 
@@ -43,11 +44,11 @@ export const ColorBgRow = ({ color }) => (
   <tr>
     <td>{color}</td>
     <td>
-      <CodeBlock>bg-{color}</CodeBlock>
+      <CodeBlock>is-bg-{color}</CodeBlock>
     </td>
     <td>
       <PreviewCode>
-        <div className={`bg-${color} px-3 py-2`}>Texto</div>
+        <div className={`is-bg-${color} px-3 py-2`}>Texto</div>
       </PreviewCode>
     </td>
   </tr>
@@ -65,5 +66,6 @@ export const ColorBgRow = ({ color }) => (
     {colors.map((color, idx) => (
       <ColorBgRow color={color} />
     ))}
+    <ColorBgRow color={'white'} />
   </tbody>
 </table>
