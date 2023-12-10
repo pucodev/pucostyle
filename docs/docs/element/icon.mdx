@@ -1,0 +1,89 @@
+import PreviewCode from '../../src/components/PreviewCode.mdx'
+
+# Icons
+
+Para la iconografía se recomienda usar [iconify](https://iconify.design/)
+
+## Iconify
+
+### Instalación
+
+Iconify cuenta con varias formas de instalación: _mediante css, html, on demand_.
+
+Recomendamos usar la versión **on demand**, para conocer más sobre las ventajas y desventajas
+de usar este metodo visitar su [documentación](https://iconify.design/docs/icon-components/)
+
+#### On demand
+
+Agrega el siguiente script a tu html, para más información visita su [documentación](https://iconify.design/docs/iconify-icon/#registering-web-component)
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+```
+
+## Uso básico
+
+Para usar íconos usar la clase `icon`
+
+<PreviewCode>
+  <div className="is-flex is-flex-column gap-3">
+    <iconify-icon class="icon" icon="mdi:account-outline"></iconify-icon>
+    <iconify-icon
+      class="icon is-medium"
+      icon="mdi:account-outline"
+    ></iconify-icon>
+    <iconify-icon
+      class="icon is-large"
+      icon="mdi:account-outline"
+    ></iconify-icon>
+  </div>
+</PreviewCode>
+
+{/* prettier-ignore */}
+```html
+<div class="is-flex is-flex-column gap-3">
+  <!-- ICON -->
+  <iconify-icon class="icon" icon="mdi:account-outline"></iconify-icon>
+
+  <!-- MEDIUM -->
+  <iconify-icon class="icon is-medium" icon="mdi:account-outline"></iconify-icon>
+
+  <!-- LARGE -->
+  <iconify-icon class="icon is-large" icon="mdi:account-outline"></iconify-icon>
+</div>
+```
+
+## Texto con ícono
+
+<PreviewCode>
+  <div class="is-flex is-flex-column gap-3">
+    <div class="is-flex gap-1">
+      <iconify-icon class="icon" icon="mdi:account-outline"></iconify-icon>
+      <span>Usuario</span>
+    </div>
+    <div class="is-flex gap-1">
+      <span>Archivar</span>
+      <iconify-icon
+        class="icon"
+        icon="mdi:archive-arrow-down-outline"
+      ></iconify-icon>
+    </div>
+  </div>
+</PreviewCode>
+
+{/* prettier-ignore */}
+```html
+<div class="is-flex is-flex-column gap-3">
+  <!-- Icono izquierda -->
+  <div class="is-flex gap-1">
+    <iconify-icon class="icon" icon="mdi:account-outline"></iconify-icon>
+    <span>Usuario</span>
+  </div>
+
+  <!-- Icono derecha -->
+  <div class="is-flex gap-1">
+    <span>Archivar</span>
+    <iconify-iconclass="icon" icon="mdi:archive-arrow-down-outline"></iconify-iconclass=>
+  </div>
+</div>
+```

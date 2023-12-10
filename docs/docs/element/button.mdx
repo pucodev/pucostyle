@@ -193,10 +193,81 @@ Un botón puede ser del tipo **rounded** usando la clase `is-rounded` además se
 </div>
 ```
 
+## Botones con íconos
+
+<PreviewCode>
+  <div className="is-flex gap-3 is-flex-wrap-wrap">
+    <button className="btn">
+      <iconify-icon class="icon" icon="mdi:home-outline"></iconify-icon>
+    </button>
+    <button className="btn is-circle is-primary">
+      <iconify-icon class="icon" icon="mdi:home-outline"></iconify-icon>
+    </button>
+    <button className="btn is-inverted is-circle">
+      <iconify-icon class="icon" icon="mdi:home-outline"></iconify-icon>
+    </button>
+    <button className="btn is-tonal is-secondary">
+      <iconify-icon class="icon" icon="mdi:home-outline"></iconify-icon>
+      <span>Hola</span>
+    </button>
+    <button className="btn is-success">
+      <iconify-icon class="icon" icon="mdi:home-outline"></iconify-icon>
+      <span>Hola Mundo</span>
+    </button>
+    <button className="btn is-danger">
+      <span>Hola Mundo</span>
+      <iconify-icon class="icon" icon="mdi:home-outline"></iconify-icon>
+    </button>
+    <button className="btn is-secondary is-inverted is-rounded">
+      <span>Hola Mundo</span>
+      <iconify-icon class="icon" icon="mdi:home-outline"></iconify-icon>
+    </button>
+  </div>
+</PreviewCode>
+
+```html
+<div class="is-flex gap-3 is-flex-wrap-wrap">
+  <!-- ICON -->
+  <button class="btn">
+    <iconify-icon class="icon" icon="mdi:home-outline"></iconify-icon>
+  </button>
+
+  <!-- ICON CIRCLE -->
+  <button class="btn is-circle is-primary">
+    <iconify-icon class="icon" icon="mdi:home-outline"></iconify-icon>
+  </button>
+
+  <!-- OTROS -->
+  <button class="btn is-inverted is-circle">
+    <iconify-icon class="icon" icon="mdi:home-outline"></iconify-icon>
+  </button>
+
+  <button class="btn is-tonal is-secondary">
+    <iconify-icon class="icon" icon="mdi:home-outline"></iconify-icon>
+    <span>Hola</span>
+  </button>
+
+  <button class="btn is-success">
+    <iconify-icon class="icon" icon="mdi:home-outline"></iconify-icon>
+    <span>Hola Mundo</span>
+  </button>
+
+  <button class="btn is-danger">
+    <span>Hola Mundo</span>
+    <iconify-icon class="icon" icon="mdi:home-outline"></iconify-icon>
+  </button>
+
+  <button class="btn is-secondary is-inverted is-rounded">
+    <span>Hola Mundo</span>
+    <iconify-icon class="icon" icon="mdi:home-outline"></iconify-icon>
+  </button>
+</div>
+```
+
 ## Tamaños
 
-| Clase       | Preview                                                                  |
-| ----------- | ------------------------------------------------------------------------ |
-| `is-small`  | <PreviewCode><button class="btn is-small">Button</button></PreviewCode>  |
-| `is-medium` | <PreviewCode><button class="btn is-medium">Button</button></PreviewCode> |
-| `is-large`  | <PreviewCode><button class="btn is-large">Button</button></PreviewCode>  |
+| Clase       | Preview                                                                      |
+| ----------- | ---------------------------------------------------------------------------- |
+| `is-small`  | <PreviewCode><button className="btn is-small">Button</button></PreviewCode>  |
+| `is-medium` | <PreviewCode><button className="btn is-medium">Button</button></PreviewCode> |
+| `is-large`  | <PreviewCode><button className="btn is-large">Button</button></PreviewCode>  |
