@@ -6,12 +6,16 @@
   .is-text-#{$label} {
     color: var(--ps-color-#{$label}) !important;
   }
+}
 
-  .is-bg-white {
-    background-color: var(--ps-color-white);
-  }
+.is-bg-white {
+  background-color: var(--ps-color-white);
+}
 
-  .is-text-white {
-    color: var(--ps-ui-color-white);
-  }
+.is-text-white {
+  color: var(--ps-ui-color-white);
+}
+
+.is-text-outline {
+  color: var(--ps-color-outline);
 }
