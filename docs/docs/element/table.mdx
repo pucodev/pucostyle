@@ -1,0 +1,304 @@
+import PreviewCode from '../../src/components/PreviewCode.mdx'
+import { tableHeaders } from '../../src/js/variables'
+
+# Tabla
+
+Puedes crear una tabla usando las etiquetas html, recuerda usar:
+
+- `table`: Etiqueta contenedora
+  - `thead`: Cabecera de la tabla (opcional)
+  - `tbody`: Cuerpo de la tabla
+  - `tr`: Fila de la tabla
+    - `th`: Celda del tipo cabecera
+    - `td`: Celda general
+
+## Uso general
+
+Usa la clase `table` para definir una tabla
+
+<PreviewCode>
+  <table className="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Mario</td>
+        <td>Bross</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Luigi</td>
+        <td>Bross</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Koopa</td>
+        <td>Troopa</td>
+      </tr>
+    </tbody>
+  </table>
+</PreviewCode>
+
+```html
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Mario</td>
+      <td>Bross</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Luigi</td>
+      <td>Bross</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Koopa</td>
+      <td>Troopa</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+## Con bordes
+
+Usar la clase `is-bordered`
+
+<PreviewCode>
+  <table className="table is-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Mario</td>
+        <td>Bross</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Luigi</td>
+        <td>Bross</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Koopa</td>
+        <td>Troopa</td>
+      </tr>
+    </tbody>
+  </table>
+</PreviewCode>
+
+```html
+<table class="table is-bordered">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Apellido</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Mario</td>
+      <td>Bross</td>
+    </tr>
+
+    <!-- Mas filas -->
+  </tbody>
+</table>
+```
+
+## Striped
+
+Para mostrar las filas impares con un color neutral usar la clase `is-striped`
+
+<PreviewCode>
+  <table className="table is-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Mario</td>
+        <td>Bross</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Luigi</td>
+        <td>Bross</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Koopa</td>
+        <td>Troopa</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Donkey</td>
+        <td>Kong</td>
+      </tr>
+    </tbody>
+  </table>
+</PreviewCode>
+
+```html
+<table class="table is-striped">
+  ...
+</table>
+```
+
+## Hoverable
+
+Para mostrar las filas en donde se pasen el mouse con un color neutral usar la clase `is-hoverable`
+
+<PreviewCode>
+  <table className="table is-hoverable">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Mario</td>
+        <td>Bross</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Luigi</td>
+        <td>Bross</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Koopa</td>
+        <td>Troopa</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Donkey</td>
+        <td>Kong</td>
+      </tr>
+    </tbody>
+  </table>
+</PreviewCode>
+
+```html
+<table class="table is-hoverable">
+  ...
+</table>
+```
+
+## Todo el ancho
+
+Si se quiere poner la tabla a todo el ancho de su contenedor usar la clase `is-fullwidth`
+
+<PreviewCode>
+  <table className="table is-fullwidth">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Mario</td>
+        <td>Bross</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Luigi</td>
+        <td>Bross</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Koopa</td>
+        <td>Troopa</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Donkey</td>
+        <td>Kong</td>
+      </tr>
+    </tbody>
+  </table>
+</PreviewCode>
+
+```html
+<table class="table is-fullwidth">
+  ...
+</table>
+```
+
+## Tabla responsiva
+
+Si deseas que la tabla tenga un scroll horizontal se tiene que agregar un contenedor con la clase `table-responsive`
+
+<PreviewCode>
+  <div className="table-responsive">
+    <table className="table">
+      <thead>
+        <tr>
+          {tableHeaders.map((header, index) => (
+            <th key={index}>{header}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          {tableHeaders.map((header, index) => (
+            <td key={index}>{`Celda ${index + 1}`}</td>
+          ))}
+        </tr>
+        <tr>
+          {tableHeaders.map((header, index) => (
+            <td key={index}>{`Celda ${index + 1}`}</td>
+          ))}
+        </tr>
+        <tr>
+          {tableHeaders.map((header, index) => (
+            <td key={index}>{`Celda ${index + 1}`}</td>
+          ))}
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</PreviewCode>
+
+```html
+<div class="table-responsive">
+  <table class="table is-fullwidth">
+    ...
+  </table>
+</div>
+```

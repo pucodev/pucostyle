@@ -10,3 +10,5 @@ export const colors = [
   'warning',
   'danger',
 ]
+
+export const tableHeaders = Array.from({ length: 20 }, (x, index) => `Cabecera`)
