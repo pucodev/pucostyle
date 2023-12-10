@@ -68,7 +68,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -90,6 +90,15 @@ tr,
 td {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+table {
+  thead,
+  th,
+  td,
+  tr {
+    background-color: transparent;
+  }
 }
 
 svg {
