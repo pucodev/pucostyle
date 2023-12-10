@@ -1,0 +1,58 @@
+import PreviewCode from '../../src/components/PreviewCode.mdx'
+
+# Checkbox
+
+## Uso básico
+
+Para implementar checkbox usar la clase `input` y tipo `checkbox` además se debe utilizar `field` como clase contenedora.
+
+<PreviewCode>
+  <div className="is-flex is-flex-column gap-2">
+    <div className="field checkbox">
+      <input type="checkbox" id="input1" />
+      <label for="input1">Coding</label>
+    </div>
+    <div className="field checkbox">
+      <input type="checkbox" id="input2" />
+      <label for="input2">
+        Aceptas los <a href="#">términos y condiciones</a>
+      </label>
+    </div>
+    <div className="field checkbox">
+      <input type="checkbox" id="input3" />
+      <label for="input3">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae tandem
+        ista ratio est? Quaerimus enim finem bonorum. Quamquam id quidem,
+        infinitum est in hac urbe
+      </label>
+    </div>
+  </div>
+</PreviewCode>
+
+```html
+<div class="is-flex is-flex-column gap-2">
+  <!-- Default checkbox -->
+  <div class="field checkbox">
+    <input type="checkbox" id="input1" />
+    <label for="input1">Coding</label>
+  </div>
+
+  <!-- Checkbox con link en el label -->
+  <div className="field checkbox">
+    <input type="checkbox" id="input2" />
+    <label for="input2">
+      Aceptas los <a href="#">términos y condiciones</a>
+    </label>
+  </div>
+
+  <!-- Checkbox con un label largo -->
+  <div class="field checkbox">
+    <input type="checkbox" id="input3" />
+    <label for="input3">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quae tandem
+      ista ratio est? Quaerimus enim finem bonorum. Quamquam id quidem,
+      infinitum est in hac urbe
+    </label>
+  </div>
+</div>
+```
