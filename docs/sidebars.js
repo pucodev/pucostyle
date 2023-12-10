@@ -21,7 +21,14 @@ const sidebars = {
     {
       type: 'category',
       label: 'Elements',
-      items: ['element/button', 'element/icon', 'element/table'],
+      items: [
+        'element/button',
+        'element/icon',
+        'element/table',
+        'element/divider',
+        'element/list',
+        'element/dialog',
+      ],
     },
     {
       type: 'category',

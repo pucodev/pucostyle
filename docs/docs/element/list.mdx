@@ -1,0 +1,113 @@
+import { colors } from '../../src/js/variables'
+import PreviewCode from '../../src/components/PreviewCode.mdx'
+
+# Listas
+
+## Uso básico
+
+Una lista es un conjunto de items que van a estar separadas una de otra, para esto debes crear un
+contenedor con la clase `list-group` y cada item con la clase `list-item`
+
+Una lista por defecto genera un espaciado usando la variable `--ps-space-3`
+
+<PreviewCode>
+  <div className="list-group">
+    <div className="list-item">
+      <div>Hola</div>
+    </div>
+    <div className="list-item">
+      <div>Hola</div>
+    </div>
+    <div className="list-item">
+      <div>Hola</div>
+    </div>
+  </div>
+</PreviewCode>
+
+```html
+<div class="list-group">
+  <div class="list-item">
+    <div>Hola</div>
+  </div>
+  <div class="list-item">
+    <div>Hola</div>
+  </div>
+  <div class="list-item">
+    <div>Hola</div>
+  </div>
+</div>
+```
+
+## Espaciado
+
+Puedes configurar el espaciado agregando la clase `gap-*` donde `*` se debe reemplazar por el valor
+del espaciado, para más información visita la [sección de espaciados](../customize/spacing)
+
+Ejemplo con un `gap-5`
+
+<PreviewCode>
+  <div className="list-group gap-5">
+    <div className="list-item">
+      <div>Hola</div>
+    </div>
+    <div className="list-item">
+      <div>Hola</div>
+    </div>
+    <div className="list-item">
+      <div>Hola</div>
+    </div>
+  </div>
+</PreviewCode>
+
+```html
+<div class="list-group gap-5">
+  <div class="list-item">
+    <div>Hola</div>
+  </div>
+  <div class="list-item">
+    <div>Hola</div>
+  </div>
+  <div class="list-item">
+    <div>Hola</div>
+  </div>
+</div>
+```
+
+## Con divider
+
+Para agregar un divider usar la clase `is-divider`
+
+:::info
+
+Un `list-group` del tipo `is-divider` se elimina el espaciado por defecto y se muestra el
+divider en el `border-bottom` de los items a excepción del último
+
+:::
+
+<PreviewCode>
+  <div className="list-group is-divider">
+    <div className="list-item py-2">
+      <div>Hola</div>
+    </div>
+    <div className="list-item py-2">
+      <div>Hola</div>
+    </div>
+    <div className="list-item py-2">
+      <div>Hola</div>
+    </div>
+  </div>
+</PreviewCode>
+
+```html
+<div class="list-group is-divider">
+  <div class="list-item py-2">
+    <div>Hola</div>
+  </div>
+  <div class="list-item py-2">
+    <div>Hola</div>
+  </div>
+  <div class="list-item py-2">
+    <div>Hola</div>
+  </div>
+</div>
+```

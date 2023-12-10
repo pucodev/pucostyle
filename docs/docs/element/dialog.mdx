@@ -1,0 +1,117 @@
+import PreviewCode from '../../src/components/PreviewCode.mdx'
+
+# Dialog
+
+Un **dialog** está constituido por:
+
+- `dialog`: contenedor
+  - `dialog-bg`: Overlay con opacidad que ocultará el contenido del fondo
+  - `dialog-card`: contenedor del dialog
+    - `dialog-header`: Cabecera del dialog, donde va el título y el botón de cerrar
+    - `dialog-body`: Donde se agrega el conenido del dialog
+    - `dialog-footer`: Donse se agrega los botones de acción
+
+## Uso básico
+
+:::info
+
+Recuerda que para activar el dialog se debe agregar la clase `is-active`
+
+:::
+
+<PreviewCode>
+  <div style={{ height: '400px', position: 'relative' }}>
+    <div className="dialog is-active dialog-preview">
+      <div className="dialog-bg"></div>
+      <div className="dialog-card">
+        <header className="dialog-header">
+          <p className="dialog-title">Título del dialog</p>
+          <button
+            className="btn is-inverted is-circle is-small is-close"
+            aria-label="close"
+          >
+            <iconify-icon class="icon" icon="mdi:close"></iconify-icon>
+          </button>
+        </header>
+        <section className="dialog-body">
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Summum a
+            vobis bonum voluptas dicitur. Sed nimis multa. Duo Reges:
+            constructio interrete. Contemnit enim disserendi elegantiam, confuse
+            loquitur.
+          </div>
+        </section>
+        <footer className="dialog-footer">
+          <button className="btn is-outlined">Cancelar</button>
+          <button className="btn is-success">Guardar</button>
+        </footer>
+      </div>
+    </div>
+  </div>
+</PreviewCode>
+
+{/* prettier-ignore */}
+```html
+<div class="dialog is-active">
+  <div class="dialog-bg"></div>
+  <div class="dialog-card">
+    <header class="dialog-header">
+      <p class="dialog-title">Título del dialog</p>
+      <button
+        class="btn is-inverted is-circle is-small is-close"
+        aria-label="close"
+      >
+        <iconify-icon class="icon" icon="mdi:close"></iconify-icon>
+      </button>
+    </header>
+    <section class="dialog-body">
+      ...
+    </section>
+    <footer class="dialog-footer">
+      <button class="btn is-outlined">Cancelar</button>
+      <button class="btn is-success">Guardar</button>
+    </footer>
+  </div>
+</div>
+```
+
+## Cuerpo escrolleable
+
+Por defecto el cuerpo del dialog se volvera escroleable cuando este ocupa más espacio que la pantalla
+
+<PreviewCode>
+  <div style={{ height: '400px', position: 'relative' }}>
+    <div className="dialog is-active dialog-preview">
+      <div className="dialog-bg"></div>
+      <div className="dialog-card">
+        <header className="dialog-header">
+          <p className="dialog-title">Título del dialog</p>
+          <button
+            className="btn is-inverted is-circle is-small is-close"
+            aria-label="close"
+          >
+            <iconify-icon class="icon" icon="mdi:close"></iconify-icon>
+          </button>
+        </header>
+        <section className="dialog-body">
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec dicuntur inconstantissime. At coluit ipse amicitias. Memini me adesse P. Id est enim, de quo quaerimus.
+
+            Quae sequuntur igitur? Sed quid sentiat, non videtis. Idemne potest esse dies saepius, qui semel fuit? Memini vero, inquam;
+
+            Sit hoc ultimum bonorum, quod nunc a me defenditur; Bork Cur haec eadem Democritus? Huius, Lyco, oratione locuples, rebus ipsis ielunior.
+
+            Tecum optime, deinde etiam cum mediocri amico. Multoque hoc melius nos veriusque quam Stoici. Maximus dolor, inquit, brevis est. Quae hic rei publicae vulnera inponebat, eadem ille sanabat. Satis est ad hoc responsum. Respondeat totidem verbis. Quo modo autem philosophus loquitur? Quare attende, quaeso.
+
+            Duo Reges: constructio interrete. Memini vero, inquam; Sed ea mala virtuti magnitudine obruebantur. Diodorus, eius auditor, adiungit ad honestatem vacuitatem doloris. Que Manilium, ab iisque M. Summus dolor plures dies manere non potest?
+          </div>
+        </section>
+        <footer className="dialog-footer">
+          <button className="btn is-outlined">Cancelar</button>
+          <button className="btn is-success">Guardar</button>
+        </footer>
+      </div>
+    </div>
+
+  </div>
+</PreviewCode>
