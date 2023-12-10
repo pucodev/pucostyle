@@ -1,0 +1,7 @@
+.divider:not(.is-vertical) {
+  border-bottom: solid 1px var(--ps-color-outline-variant);
+}
+
+.divider.is-vertical {
+  border-right: solid 1px var(--ps-color-outline-variant);
+}

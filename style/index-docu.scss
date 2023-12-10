@@ -1,3 +1,7 @@
 .pucostyle {
-  @import './index.scss';
+  @import "./index.scss";
+
+  .dialog-preview {
+    position: absolute;
+  }
 }

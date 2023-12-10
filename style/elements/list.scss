@@ -1,0 +1,14 @@
+.list-group {
+  display: flex;
+  flex-direction: column;
+
+  &.is-divider {
+    .list-item:not(:last-child) {
+      border-bottom: solid 1px var(--ps-color-outline-variant);
+    }
+  }
+
+  &:not(.is-divider) {
+    gap: var(--ps-space-3);
+  }
+}
