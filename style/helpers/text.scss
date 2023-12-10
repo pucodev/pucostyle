@@ -42,3 +42,14 @@ $text-aligns: ("center", "left", "right");
     text-align: #{$align} !important;
   }
 }
+
+// Link
+a,
+.link {
+  color: var(--ps-color-primary);
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--ps-color-on-primary-container);
+  }
+}
