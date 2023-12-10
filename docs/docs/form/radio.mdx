@@ -1,0 +1,59 @@
+import PreviewCode from '../../src/components/PreviewCode.mdx'
+
+# Radio
+
+## Uso básico
+
+Para implementar radio usar la clase `input` y tipo `radio` además se debe utilizar `field` como clase contenedora.
+
+<PreviewCode>
+  <div className="mb-3">
+    <div className="font-bold">¿Cuál es tu saga favorita?</div>
+    <div className="is-size-7 is-text-outline">Escoger con sabiduría tu debes</div>
+  </div>
+
+  <div className="is-flex is-flex-column gap-2">
+    <div className="field radio">
+      <input type="radio" name="movie" id="input1" />
+      <label htmlFor="input1">Star Wars</label>
+    </div>
+    <div className="field radio">
+      <input type="radio" name="movie" id="input2" />
+      <label htmlFor="input2">Harry Potter</label>
+    </div>
+    <div className="field radio">
+      <input type="radio" name="movie" id="input3" />
+      <label htmlFor="input3">Mad Max</label>
+    </div>
+    <div className="field radio">
+      <input type="radio" name="movie" id="input4" />
+      <label htmlFor="input4">El Padrino</label>
+    </div>
+  </div>
+</PreviewCode>
+
+```html
+<div class="mb-3">
+  <div class="font-bold">¿Cuál es tu saga favorita?</div>
+  <div class="is-size-7 is-text-outline">Escoger con sabiduría tu debes</div>
+</div>
+
+<div class="is-flex is-flex-column gap-2">
+  <div class="field radio">
+    <input type="radio" name="movie" id="input1" />
+    <label for="input1">Star Wars</label>
+  </div>
+  <div class="field radio">
+    <input type="radio" name="movie" id="input2" />
+    <label for="input2">Harry Potter</label>
+  </div>
+  <div class="field radio">
+    <input type="radio" name="movie" id="input3" />
+    <label for="input3">Mad Max</label>
+  </div>
+  <div class="field radio">
+    <input type="radio" name="movie" id="input4" />
+    <label for="input4">El Padrino</label>
+  </div>
+</div>
+```

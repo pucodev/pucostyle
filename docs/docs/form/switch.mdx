@@ -1,0 +1,48 @@
+import PreviewCode from '../../src/components/PreviewCode.mdx'
+
+# Switch
+
+## Uso básico
+
+Para implementar checkbox usar la clase `input` y tipo `checkbox` además se debe utilizar `field switch` como clase contenedora.
+
+:::info
+
+Recuerda que para que funcione el switch se debe agregar el `label` sin texto
+
+:::
+
+<PreviewCode>
+  <div className="is-flex is-flex-column gap-3">
+    <div className="field switch">
+      <input type="checkbox" role="switch" id="switch1" />
+      <label className="slider" htmlFor="switch1"></label>
+    </div>
+    <div className="is-flex is-align-items-center gap-2">
+      <div className="field switch">
+        <input type="checkbox" role="switch" id="switch2" />
+        <label className="slider" htmlFor="switch2"></label>
+      </div>
+      <label htmlFor="switch2">Activar la carta</label>
+    </div>
+  </div>
+</PreviewCode>
+
+```html
+<div class="is-flex is-flex-column gap-3">
+  <!-- Default switch -->
+  <div class="field switch">
+    <input type="checkbox" role="switch" id="switch1" />
+    <label class="slider" for="switch1"></label>
+  </div>
+
+  <!-- Switch con texto -->
+  <div class="is-flex is-align-items-center gap-2">
+    <div class="field switch">
+      <input type="checkbox" role="switch" id="switch2" />
+      <label class="slider" for="switch2"></label>
+    </div>
+    <label for="switch2">Activar la carta</label>
+  </div>
+</div>
+```

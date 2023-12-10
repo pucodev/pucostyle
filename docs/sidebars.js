@@ -26,7 +26,14 @@ const sidebars = {
     {
       type: 'category',
       label: 'Form',
-      items: ['form/input', 'form/select', 'form/textarea', 'form/checkbox'],
+      items: [
+        'form/input',
+        'form/select',
+        'form/textarea',
+        'form/checkbox',
+        'form/radio',
+        'form/switch',
+      ],
     },
   ],
 }
