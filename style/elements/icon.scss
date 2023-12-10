@@ -1,0 +1,15 @@
+.icon {
+  --ps-icon-size: var(--ps-text-4);
+
+  width: var(--ps-icon-size);
+  height: var(--ps-icon-size);
+  font-size: var(--ps-icon-size);
+
+  &.is-medium {
+    --ps-icon-size: var(--ps-text-3);
+  }
+
+  &.is-large {
+    --ps-icon-size: var(--ps-text-2);
+  }
+}
