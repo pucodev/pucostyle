@@ -3,76 +3,102 @@
   // ****************
   // COLORS
   // ****************
-  // primary
-  @each $name, $code in $color-primary {
-    --ps-color-primary-#{$name}: #{$code};
-  }
+  --ps-color-primary: 298 31% 53%;
+  --ps-color-secondary: 240 6% 10%;
+  --ps-color-info: 229 96% 71%;
+  --ps-color-success: 160 84% 39%;
+  --ps-color-warning: 42 100% 68%;
+  --ps-color-danger: 0 84% 60%;
 
-  // secondary
-  @each $name, $code in $color-secondary {
-    --ps-color-secondary-#{$name}: #{$code};
-  }
+  --ps-color-primary-foreground: 260 82% 98%;
+  --ps-color-secondary-foreground: 0 0% 98%;
+  --ps-color-info-foreground: 223 78% 98%;
+  --ps-color-success-foreground: 158 50% 97%;
+  --ps-color-warning-foreground: 26 83.3% 14.1%;
+  --ps-color-danger-foreground: 0 82% 98%;
 
-  // info
-  @each $name, $code in $color-info {
-    --ps-color-info-#{$name}: #{$code};
-  }
+  // Hover colors
+  --ps-color-primary-hover: hsl(var(--ps-color-primary) / 0.9);
+  --ps-color-secondary-hover: hsl(var(--ps-color-secondary) / 0.9);
+  --ps-color-info-hover: hsl(var(--ps-color-info) / 0.9);
+  --ps-color-success-hover: hsl(var(--ps-color-success) / 0.9);
+  --ps-color-warning-hover: hsl(var(--ps-color-warning) / 0.9);
+  --ps-color-danger-hover: hsl(var(--ps-color-danger) / 0.9);
 
-  // success
-  @each $name, $code in $color-success {
-    --ps-color-success-#{$name}: #{$code};
-  }
+  // UI sizes
+  --ps-default-radius: 0.3rem;
 
-  // warning
-  @each $name, $code in $color-warning {
-    --ps-color-warning-#{$name}: #{$code};
-  }
+  // // primary
+  // @each $name, $code in $color-primary {
+  //   --ps-color-primary-#{$name}: #{$code};
+  // }
 
-  // danger
-  @each $name, $code in $color-danger {
-    --ps-color-danger-#{$name}: #{$code};
-  }
+  // // secondary
+  // @each $name, $code in $color-secondary {
+  //   --ps-color-secondary-#{$name}: #{$code};
+  // }
 
-  // neutral
-  @each $name, $code in $color-neutral {
-    --ps-color-neutral-#{$name}: #{$code};
-  }
+  // // info
+  // @each $name, $code in $color-info {
+  //   --ps-color-info-#{$name}: #{$code};
+  // }
 
-  // COLOR VARIABLES
-  --ps-color-primary: var(--ps-color-primary-500);
-  --ps-color-on-primary: var(--ps-color-primary-50);
-  --ps-color-primary-container: var(--ps-color-primary-200);
-  --ps-color-on-primary-container: var(--ps-color-primary-800);
+  // // success
+  // @each $name, $code in $color-success {
+  //   --ps-color-success-#{$name}: #{$code};
+  // }
 
-  --ps-color-secondary: var(--ps-color-secondary-500);
-  --ps-color-on-secondary: var(--ps-color-secondary-50);
-  --ps-color-secondary-container: var(--ps-color-secondary-200);
-  --ps-color-on-secondary-container: var(--ps-color-secondary-800);
+  // // warning
+  // @each $name, $code in $color-warning {
+  //   --ps-color-warning-#{$name}: #{$code};
+  // }
 
-  --ps-color-info: var(--ps-color-info-500);
-  --ps-color-on-info: var(--ps-color-info-50);
-  --ps-color-info-container: var(--ps-color-info-200);
-  --ps-color-on-info-container: var(--ps-color-info-800);
+  // // danger
+  // @each $name, $code in $color-danger {
+  //   --ps-color-danger-#{$name}: #{$code};
+  // }
 
-  --ps-color-success: var(--ps-color-success-500);
-  --ps-color-on-success: var(--ps-color-success-50);
-  --ps-color-success-container: var(--ps-color-success-200);
-  --ps-color-on-success-container: var(--ps-color-success-800);
+  // // neutral
+  // @each $name, $code in $color-neutral {
+  //   --ps-color-neutral-#{$name}: #{$code};
+  // }
 
-  --ps-color-warning: var(--ps-color-warning-500);
-  --ps-color-on-warning: var(--ps-color-warning-800);
-  --ps-color-warning-container: var(--ps-color-warning-200);
-  --ps-color-on-warning-container: var(--ps-color-warning-800);
+  // // COLOR VARIABLES
+  // --ps-color-primary: var(--ps-color-primary-500);
+  // --ps-color-on-primary: var(--ps-color-primary-50);
+  // --ps-color-primary-container: var(--ps-color-primary-200);
+  // --ps-color-on-primary-container: var(--ps-color-primary-800);
 
-  --ps-color-danger: var(--ps-color-danger-500);
-  --ps-color-on-danger: var(--ps-color-danger-50);
-  --ps-color-danger-container: var(--ps-color-danger-200);
-  --ps-color-on-danger-container: var(--ps-color-danger-800);
+  // --ps-color-secondary: var(--ps-color-secondary-500);
+  // --ps-color-on-secondary: var(--ps-color-secondary-50);
+  // --ps-color-secondary-container: var(--ps-color-secondary-200);
+  // --ps-color-on-secondary-container: var(--ps-color-secondary-800);
 
-  --ps-color-outline: var(--ps-color-neutral-500);
-  --ps-color-outline-variant: var(--ps-color-neutral-200);
+  // --ps-color-info: var(--ps-color-info-500);
+  // --ps-color-on-info: var(--ps-color-info-50);
+  // --ps-color-info-container: var(--ps-color-info-200);
+  // --ps-color-on-info-container: var(--ps-color-info-800);
 
-  --ps-color-on-surface: var(--ps-color-neutral-800);
+  // --ps-color-success: var(--ps-color-success-500);
+  // --ps-color-on-success: var(--ps-color-success-50);
+  // --ps-color-success-container: var(--ps-color-success-200);
+  // --ps-color-on-success-container: var(--ps-color-success-800);
+
+  // --ps-color-warning: var(--ps-color-warning-500);
+  // --ps-color-on-warning: var(--ps-color-warning-800);
+  // --ps-color-warning-container: var(--ps-color-warning-200);
+  // --ps-color-on-warning-container: var(--ps-color-warning-800);
+
+  // --ps-color-danger: var(--ps-color-danger-500);
+  // --ps-color-on-danger: var(--ps-color-danger-50);
+  // --ps-color-danger-container: var(--ps-color-danger-200);
+  // --ps-color-on-danger-container: var(--ps-color-danger-800);
+
+  // --ps-color-outline: var(--ps-color-neutral-500);
+  // --ps-color-outline-variant: var(--ps-color-neutral-200);
+
+  // --ps-color-surface: var(--ps-color-neutral-100);
+  // --ps-color-on-surface: var(--ps-color-neutral-800);
 
   // Other colors
   @each $name, $code in $ui-colors {
