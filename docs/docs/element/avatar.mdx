@@ -1,0 +1,239 @@
+import PreviewCode from '../../src/components/PreviewCode.mdx'
+import { imageSizes, imageRatios } from '../../src/js/variables'
+import CodeBlock from '@theme/CodeBlock'
+
+# Avatar / Image
+
+Agrega estilos a tus imágenes
+
+## Uso básico
+
+<PreviewCode>
+<div className='is-flex gap-4'>
+  <figure className="image is-size-128">
+    <img
+      src="https://source.unsplash.com/random/200x200/?profile"
+      alt="Imagen de perfil"
+    />
+  </figure>
+
+<figure className="image is-size-128 is-rounded">
+  <img
+    src="https://source.unsplash.com/random/200x200/?profile"
+    alt="Imagen de perfil"
+  />
+</figure>
+
+<figure className="image is-size-128 is-rounded-3">
+  <img
+    src="https://source.unsplash.com/random/200x200/?profile"
+    alt="Imagen de perfil"
+  />
+</figure>
+
+  <figure className="image is-size-128 is-rounded-3">
+    <div className="fallback">PS</div>
+  </figure>
+</div>
+</PreviewCode>
+
+```html
+<div class="is-flex gap-4">
+  <figure class="image is-size-128">
+    <img
+      src="https://source.unsplash.com/random/200x200/?profile"
+      alt="Imagen de perfil"
+    />
+  </figure>
+
+  <figure class="image is-size-128 is-rounded">
+    <img
+      src="https://source.unsplash.com/random/200x200/?profile"
+      alt="Imagen de perfil"
+    />
+  </figure>
+
+  <figure class="image is-size-128 is-rounded-3">
+    <img
+      src="https://source.unsplash.com/random/200x200/?profile"
+      alt="Imagen de perfil"
+    />
+  </figure>
+
+  <figure class="image is-size-128 is-rounded-3">
+    <div class="fallback">PS</div>
+  </figure>
+</div>
+```
+
+## Tamaños
+
+Tamaños disponibles
+
+<table>
+  <thead>
+    <tr>
+      <th>Clase</th>
+      <th>Tamaño</th>
+      <th>Preview</th>
+    </tr>
+  </thead>
+  <tbody>
+    {imageSizes.map((size, idx) => (
+      <tr>
+        <td>
+          <CodeBlock>is-size-{size}</CodeBlock>
+        </td>
+        <td>
+          {size}px x {size}px
+        </td>
+        <td>
+          <PreviewCode>
+            <figure className={`image is-size-${size}`}>
+              <img
+                src="https://source.unsplash.com/random/200x200/?profile"
+                alt="Imagen de perfil"
+              />
+            </figure>
+          </PreviewCode>
+
+        </td>
+      </tr>
+    ))}
+
+  </tbody>
+</table>
+
+## Redondeado
+
+Para redondear las imágenes puedes usar el helper de dimensiones para ello usa las clases `is-rounded-*`
+
+Donde `*` puede ser del 1 al 12, para más información visita la [documentacion de personalizar espacios](../customize/spacing)
+
+En caso se requiera que este completamente redondeado puedes usar la clase `is-rounded`
+
+<PreviewCode>
+<div className='is-flex gap-4'>
+<figure className="image is-size-128 is-rounded">
+  <img
+    src="https://source.unsplash.com/random/200x200/?profile"
+    alt="Imagen de perfil"
+  />
+</figure>
+
+<figure className="image is-size-128 is-rounded-3">
+  <img
+    src="https://source.unsplash.com/random/200x200/?profile"
+    alt="Imagen de perfil"
+  />
+</figure>
+
+<figure className="image is-size-128 is-rounded-6">
+  <img
+    src="https://source.unsplash.com/random/200x200/?profile"
+    alt="Imagen de perfil"
+  />
+</figure>
+
+<figure className="image is-size-128 is-rounded-8">
+  <img
+    src="https://source.unsplash.com/random/200x200/?profile"
+    alt="Imagen de perfil"
+  />
+</figure>
+</div>
+</PreviewCode>
+
+```html
+<div class="is-flex gap-4">
+  <figure class="image is-size-128 is-rounded">
+    <img
+      src="https://source.unsplash.com/random/200x200/?profile"
+      alt="Imagen de perfil"
+    />
+  </figure>
+
+  <figure class="image is-size-128 is-rounded-3">
+    <img
+      src="https://source.unsplash.com/random/200x200/?profile"
+      alt="Imagen de perfil"
+    />
+  </figure>
+
+  <figure class="image is-size-128 is-rounded-6">
+    <img
+      src="https://source.unsplash.com/random/200x200/?profile"
+      alt="Imagen de perfil"
+    />
+  </figure>
+
+  <figure class="image is-size-128 is-rounded-8">
+    <img
+      src="https://source.unsplash.com/random/200x200/?profile"
+      alt="Imagen de perfil"
+    />
+  </figure>
+</div>
+```
+
+## Fallback
+
+Muestra un texto debajo de tu imágen mientras se descarga, por ejemplo lo puedes usar para colocar las iniciales del usuario
+
+<PreviewCode>
+  <div className="is-flex gap-4">
+    <figure className="image is-size-128 is-rounded-3">
+      <div className="fallback">PS</div>
+      <img src="" alt="" />
+    </figure>
+  </div>
+</PreviewCode>
+
+```html
+<figure class="image is-size-128 is-rounded-3">
+  <div class="fallback">PS</div>
+  <img src="" alt="" />
+</figure>
+```
+
+## Responsive
+
+<table>
+  <thead>
+    <tr>
+      <th>Clase</th>
+      <th>Tamaño</th>
+      <th>Preview</th>
+    </tr>
+  </thead>
+  <tbody>
+    {imageRatios.map((ratio, idx) => (
+      <tr>
+        <td>
+          <CodeBlock>is-{ratio[0]}by{ratio[1]}</CodeBlock>
+        </td>
+        <td>
+          {ratio[0]} x {ratio[1]}
+        </td>
+        <td>
+          <PreviewCode>
+            <figure className={`image is-${ratio[0]}by${ratio[1]}`} style={{width: '120px'}}>
+              <img
+                src="https://source.unsplash.com/random/200x200/?profile"
+                alt="Imagen de perfil"
+              />
+            </figure>
+          </PreviewCode>
+
+        </td>
+      </tr>
+    ))}
+
+  </tbody>
+</table>
+
+:::info
+
+Imagenes proporcionadas por [Unsplash](https://unsplash.com/)
+
+:::

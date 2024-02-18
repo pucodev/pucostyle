@@ -28,6 +28,10 @@
   // UI sizes
   --ps-default-radius: 0.3rem;
 
+  --ps-ui-color-border: 240 10% 78%;
+  --ps-ui-color-text: 222 47% 11%;
+  --ps-ui-color-muted: 210 40% 96.1%;
+
   // // primary
   // @each $name, $code in $color-primary {
   //   --ps-color-primary-#{$name}: #{$code};

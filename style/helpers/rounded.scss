@@ -1,0 +1,5 @@
+@each $name, $value in $spaces {
+  .is-rounded-#{$name} {
+    border-radius: var(--ps-space-#{$name}) !important;
+  }
+}
