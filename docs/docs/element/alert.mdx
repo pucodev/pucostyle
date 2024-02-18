@@ -1,0 +1,126 @@
+import { colors } from '../../src/js/variables'
+import PreviewCode from '../../src/components/PreviewCode.mdx'
+
+# Alert
+
+Muestra un mensaje de alerta
+
+## Uso básico
+
+<PreviewCode>
+  <div className="alert">
+    <iconify-icon class="icon" icon="mdi:home-outline"></iconify-icon>
+    <div class="alert-content">
+      <div className="alert-header">¡Alto!</div>
+      <div className="alert-body">
+        Es hora de descansar un momento ¡Dísfrutalo!
+      </div>
+    </div>
+  </div>
+</PreviewCode>
+
+```html
+<div class="alert">
+  <iconify-icon class="icon" icon="mdi:home-outline"></iconify-icon>
+  <div class="alert-content">
+    <div class="alert-header">¡Alto!</div>
+    <div class="alert-body">Es hora de descansar un momento ¡Dísfrutalo!</div>
+  </div>
+</div>
+```
+
+## Variantes
+
+<PreviewCode>
+<div className="is-flex is-flex-column gap-3">
+  <div className="alert is-info">
+    <iconify-icon class="icon" icon="mdi:information-outline"></iconify-icon>
+    <div className="alert-content">
+      <div className="alert-header">Lorem Ipsum</div>
+      <div className="alert-body">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem impedit sapiente quo culpa omnis, aperiam maxime neque ad ullam corporis magnam consequuntur consectetur distinctio mollitia perspiciatis nisi repellat eligendi illo!
+      </div>
+    </div>
+  </div>
+
+<div className="alert is-success">
+  <iconify-icon class="icon" icon="mdi:check-circle-outline"></iconify-icon>
+  <div className="alert-content">
+    <div className="alert-header">Lorem Ipsum</div>
+    <div className="alert-body">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem impedit
+      sapiente quo culpa omnis, aperiam maxime neque ad ullam corporis magnam
+      consequuntur consectetur distinctio mollitia perspiciatis nisi repellat
+      eligendi illo!
+    </div>
+  </div>
+</div>
+
+<div className="alert is-warning">
+  <iconify-icon class="icon" icon="mdi:alert-circle-outline"></iconify-icon>
+  <div className="alert-content">
+    <div className="alert-header">Lorem Ipsum</div>
+    <div className="alert-body">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem impedit
+      sapiente quo culpa omnis, aperiam maxime neque ad ullam corporis magnam
+      consequuntur consectetur distinctio mollitia perspiciatis nisi repellat
+      eligendi illo!
+    </div>
+  </div>
+</div>
+
+<div className="alert is-danger">
+  <iconify-icon class="icon" icon="mdi:alert-outline"></iconify-icon>
+  <div className="alert-content">
+    <div className="alert-header">Lorem Ipsum</div>
+    <div className="alert-body">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem impedit
+      sapiente quo culpa omnis, aperiam maxime neque ad ullam corporis magnam
+      consequuntur consectetur distinctio mollitia perspiciatis nisi repellat
+      eligendi illo!
+    </div>
+  </div>
+</div>
+
+</div>
+</PreviewCode>
+
+```html
+<div class="is-flex is-flex-column gap-3">
+  <!-- INFO -->
+  <div class="alert is-info">
+    <iconify-icon class="icon" icon="mdi:information-outline"></iconify-icon>
+    <div class="alert-content">
+      <div class="alert-header">Lorem Ipsum</div>
+      <div class="alert-body">...</div>
+    </div>
+  </div>
+
+  <!-- SUCCESS -->
+  <div class="alert is-success">
+    <iconify-icon class="icon" icon="mdi:check-circle-outline"></iconify-icon>
+    <div class="alert-content">
+      <div class="alert-header">Lorem Ipsum</div>
+      <div class="alert-body">...</div>
+    </div>
+  </div>
+
+  <!-- WARNING -->
+  <div class="alert is-warning">
+    <iconify-icon class="icon" icon="mdi:alert-circle-outline"></iconify-icon>
+    <div class="alert-content">
+      <div class="alert-header">Lorem Ipsum</div>
+      <div class="alert-body">...</div>
+    </div>
+  </div>
+
+  <!-- DANGER -->
+  <div class="alert is-danger">
+    <iconify-icon class="icon" icon="mdi:alert-outline"></iconify-icon>
+    <div class="alert-content">
+      <div class="alert-header">Lorem Ipsum</div>
+      <div class="alert-body">...</div>
+    </div>
+  </div>
+</div>
+```

@@ -1,0 +1,25 @@
+.alert {
+  --ps-alert-color-border: hsl(var(--ps-ui-color-border));
+  --ps-alert-color: hsl(--ps-ui-color-text);
+
+  display: flex;
+  gap: var(--ps-space-3);
+  border: solid 1px var(--ps-alert-color-border);
+  color: var(--ps-alert-color);
+  border-radius: var(--ps-default-radius);
+  padding: var(--ps-space-3) var(--ps-space-3);
+  box-shadow: none;
+
+  .alert-header {
+    font-weight: var(--ps-font-weight-bold);
+    line-height: 1;
+    margin-bottom: var(--ps-space-1);
+  }
+
+  @each $label in $color-labels {
+    &.is-#{$label} {
+      --ps-alert-color-border: hsl(var(--ps-color-#{$label}));
+      --ps-alert-color: hsl(var(--ps-color-#{$label}));
+    }
+  }
+}
